@@ -1,0 +1,772 @@
+﻿{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Caf\u00e9 Growth Trends Across Melbourne's Key Suburbs",
+    "subtitle": "Small multiples showing how each area's caf\u00e9 scene evolved from 2002 to 2024",
+    "fontSize": 16,
+    "subtitleFontSize": 12
+  },
+  "data": {
+    "values": [
+      {
+        "year": 2002,
+        "area": "Carlton",
+        "count": 111
+      },
+      {
+        "year": 2002,
+        "area": "Docklands",
+        "count": 7
+      },
+      {
+        "year": 2002,
+        "area": "East Melbourne",
+        "count": 20
+      },
+      {
+        "year": 2002,
+        "area": "Melbourne (CBD)",
+        "count": 437
+      },
+      {
+        "year": 2002,
+        "area": "North Melbourne",
+        "count": 26
+      },
+      {
+        "year": 2002,
+        "area": "Southbank",
+        "count": 21
+      },
+      {
+        "year": 2003,
+        "area": "Carlton",
+        "count": 111
+      },
+      {
+        "year": 2003,
+        "area": "Docklands",
+        "count": 13
+      },
+      {
+        "year": 2003,
+        "area": "East Melbourne",
+        "count": 23
+      },
+      {
+        "year": 2003,
+        "area": "Melbourne (CBD)",
+        "count": 437
+      },
+      {
+        "year": 2003,
+        "area": "North Melbourne",
+        "count": 31
+      },
+      {
+        "year": 2003,
+        "area": "Southbank",
+        "count": 21
+      },
+      {
+        "year": 2004,
+        "area": "Carlton",
+        "count": 111
+      },
+      {
+        "year": 2004,
+        "area": "Docklands",
+        "count": 13
+      },
+      {
+        "year": 2004,
+        "area": "East Melbourne",
+        "count": 23
+      },
+      {
+        "year": 2004,
+        "area": "Melbourne (CBD)",
+        "count": 453
+      },
+      {
+        "year": 2004,
+        "area": "North Melbourne",
+        "count": 31
+      },
+      {
+        "year": 2004,
+        "area": "Southbank",
+        "count": 21
+      },
+      {
+        "year": 2005,
+        "area": "Carlton",
+        "count": 120
+      },
+      {
+        "year": 2005,
+        "area": "Docklands",
+        "count": 24
+      },
+      {
+        "year": 2005,
+        "area": "East Melbourne",
+        "count": 28
+      },
+      {
+        "year": 2005,
+        "area": "Melbourne (CBD)",
+        "count": 458
+      },
+      {
+        "year": 2005,
+        "area": "North Melbourne",
+        "count": 37
+      },
+      {
+        "year": 2005,
+        "area": "Southbank",
+        "count": 21
+      },
+      {
+        "year": 2006,
+        "area": "Carlton",
+        "count": 120
+      },
+      {
+        "year": 2006,
+        "area": "Docklands",
+        "count": 24
+      },
+      {
+        "year": 2006,
+        "area": "East Melbourne",
+        "count": 28
+      },
+      {
+        "year": 2006,
+        "area": "Melbourne (CBD)",
+        "count": 472
+      },
+      {
+        "year": 2006,
+        "area": "North Melbourne",
+        "count": 37
+      },
+      {
+        "year": 2006,
+        "area": "Southbank",
+        "count": 24
+      },
+      {
+        "year": 2007,
+        "area": "Carlton",
+        "count": 127
+      },
+      {
+        "year": 2007,
+        "area": "Docklands",
+        "count": 28
+      },
+      {
+        "year": 2007,
+        "area": "East Melbourne",
+        "count": 33
+      },
+      {
+        "year": 2007,
+        "area": "Melbourne (CBD)",
+        "count": 485
+      },
+      {
+        "year": 2007,
+        "area": "North Melbourne",
+        "count": 38
+      },
+      {
+        "year": 2007,
+        "area": "Southbank",
+        "count": 24
+      },
+      {
+        "year": 2008,
+        "area": "Carlton",
+        "count": 127
+      },
+      {
+        "year": 2008,
+        "area": "Docklands",
+        "count": 28
+      },
+      {
+        "year": 2008,
+        "area": "East Melbourne",
+        "count": 33
+      },
+      {
+        "year": 2008,
+        "area": "Melbourne (CBD)",
+        "count": 502
+      },
+      {
+        "year": 2008,
+        "area": "North Melbourne",
+        "count": 38
+      },
+      {
+        "year": 2008,
+        "area": "Southbank",
+        "count": 23
+      },
+      {
+        "year": 2009,
+        "area": "Carlton",
+        "count": 136
+      },
+      {
+        "year": 2009,
+        "area": "Docklands",
+        "count": 40
+      },
+      {
+        "year": 2009,
+        "area": "East Melbourne",
+        "count": 32
+      },
+      {
+        "year": 2009,
+        "area": "Melbourne (CBD)",
+        "count": 520
+      },
+      {
+        "year": 2009,
+        "area": "North Melbourne",
+        "count": 46
+      },
+      {
+        "year": 2009,
+        "area": "Southbank",
+        "count": 23
+      },
+      {
+        "year": 2010,
+        "area": "Carlton",
+        "count": 136
+      },
+      {
+        "year": 2010,
+        "area": "Docklands",
+        "count": 40
+      },
+      {
+        "year": 2010,
+        "area": "East Melbourne",
+        "count": 32
+      },
+      {
+        "year": 2010,
+        "area": "Melbourne (CBD)",
+        "count": 534
+      },
+      {
+        "year": 2010,
+        "area": "North Melbourne",
+        "count": 46
+      },
+      {
+        "year": 2010,
+        "area": "Southbank",
+        "count": 23
+      },
+      {
+        "year": 2011,
+        "area": "Carlton",
+        "count": 136
+      },
+      {
+        "year": 2011,
+        "area": "Docklands",
+        "count": 40
+      },
+      {
+        "year": 2011,
+        "area": "East Melbourne",
+        "count": 32
+      },
+      {
+        "year": 2011,
+        "area": "Melbourne (CBD)",
+        "count": 550
+      },
+      {
+        "year": 2011,
+        "area": "North Melbourne",
+        "count": 46
+      },
+      {
+        "year": 2011,
+        "area": "Southbank",
+        "count": 32
+      },
+      {
+        "year": 2012,
+        "area": "Carlton",
+        "count": 138
+      },
+      {
+        "year": 2012,
+        "area": "Docklands",
+        "count": 38
+      },
+      {
+        "year": 2012,
+        "area": "East Melbourne",
+        "count": 35
+      },
+      {
+        "year": 2012,
+        "area": "Melbourne (CBD)",
+        "count": 562
+      },
+      {
+        "year": 2012,
+        "area": "North Melbourne",
+        "count": 47
+      },
+      {
+        "year": 2012,
+        "area": "Southbank",
+        "count": 32
+      },
+      {
+        "year": 2013,
+        "area": "Carlton",
+        "count": 138
+      },
+      {
+        "year": 2013,
+        "area": "Docklands",
+        "count": 38
+      },
+      {
+        "year": 2013,
+        "area": "East Melbourne",
+        "count": 35
+      },
+      {
+        "year": 2013,
+        "area": "Melbourne (CBD)",
+        "count": 586
+      },
+      {
+        "year": 2013,
+        "area": "North Melbourne",
+        "count": 47
+      },
+      {
+        "year": 2013,
+        "area": "Southbank",
+        "count": 39
+      },
+      {
+        "year": 2014,
+        "area": "Carlton",
+        "count": 145
+      },
+      {
+        "year": 2014,
+        "area": "Docklands",
+        "count": 50
+      },
+      {
+        "year": 2014,
+        "area": "East Melbourne",
+        "count": 31
+      },
+      {
+        "year": 2014,
+        "area": "Melbourne (CBD)",
+        "count": 589
+      },
+      {
+        "year": 2014,
+        "area": "North Melbourne",
+        "count": 50
+      },
+      {
+        "year": 2014,
+        "area": "Southbank",
+        "count": 39
+      },
+      {
+        "year": 2015,
+        "area": "Carlton",
+        "count": 145
+      },
+      {
+        "year": 2015,
+        "area": "Docklands",
+        "count": 50
+      },
+      {
+        "year": 2015,
+        "area": "East Melbourne",
+        "count": 31
+      },
+      {
+        "year": 2015,
+        "area": "Melbourne (CBD)",
+        "count": 603
+      },
+      {
+        "year": 2015,
+        "area": "North Melbourne",
+        "count": 50
+      },
+      {
+        "year": 2015,
+        "area": "Southbank",
+        "count": 44
+      },
+      {
+        "year": 2016,
+        "area": "Carlton",
+        "count": 163
+      },
+      {
+        "year": 2016,
+        "area": "Docklands",
+        "count": 59
+      },
+      {
+        "year": 2016,
+        "area": "East Melbourne",
+        "count": 34
+      },
+      {
+        "year": 2016,
+        "area": "Melbourne (CBD)",
+        "count": 605
+      },
+      {
+        "year": 2016,
+        "area": "North Melbourne",
+        "count": 58
+      },
+      {
+        "year": 2016,
+        "area": "Southbank",
+        "count": 44
+      },
+      {
+        "year": 2017,
+        "area": "Carlton",
+        "count": 163
+      },
+      {
+        "year": 2017,
+        "area": "Docklands",
+        "count": 59
+      },
+      {
+        "year": 2017,
+        "area": "East Melbourne",
+        "count": 34
+      },
+      {
+        "year": 2017,
+        "area": "Melbourne (CBD)",
+        "count": 606
+      },
+      {
+        "year": 2017,
+        "area": "North Melbourne",
+        "count": 58
+      },
+      {
+        "year": 2017,
+        "area": "Southbank",
+        "count": 44
+      },
+      {
+        "year": 2018,
+        "area": "Carlton",
+        "count": 152
+      },
+      {
+        "year": 2018,
+        "area": "Docklands",
+        "count": 62
+      },
+      {
+        "year": 2018,
+        "area": "East Melbourne",
+        "count": 34
+      },
+      {
+        "year": 2018,
+        "area": "Melbourne (CBD)",
+        "count": 615
+      },
+      {
+        "year": 2018,
+        "area": "North Melbourne",
+        "count": 60
+      },
+      {
+        "year": 2018,
+        "area": "Southbank",
+        "count": 44
+      },
+      {
+        "year": 2019,
+        "area": "Carlton",
+        "count": 152
+      },
+      {
+        "year": 2019,
+        "area": "Docklands",
+        "count": 62
+      },
+      {
+        "year": 2019,
+        "area": "East Melbourne",
+        "count": 34
+      },
+      {
+        "year": 2019,
+        "area": "Melbourne (CBD)",
+        "count": 612
+      },
+      {
+        "year": 2019,
+        "area": "North Melbourne",
+        "count": 60
+      },
+      {
+        "year": 2019,
+        "area": "Southbank",
+        "count": 46
+      },
+      {
+        "year": 2020,
+        "area": "Carlton",
+        "count": 145
+      },
+      {
+        "year": 2020,
+        "area": "Docklands",
+        "count": 65
+      },
+      {
+        "year": 2020,
+        "area": "East Melbourne",
+        "count": 30
+      },
+      {
+        "year": 2020,
+        "area": "Melbourne (CBD)",
+        "count": 571
+      },
+      {
+        "year": 2020,
+        "area": "North Melbourne",
+        "count": 53
+      },
+      {
+        "year": 2020,
+        "area": "Southbank",
+        "count": 44
+      },
+      {
+        "year": 2021,
+        "area": "Carlton",
+        "count": 145
+      },
+      {
+        "year": 2021,
+        "area": "Docklands",
+        "count": 65
+      },
+      {
+        "year": 2021,
+        "area": "East Melbourne",
+        "count": 30
+      },
+      {
+        "year": 2021,
+        "area": "Melbourne (CBD)",
+        "count": 566
+      },
+      {
+        "year": 2021,
+        "area": "North Melbourne",
+        "count": 53
+      },
+      {
+        "year": 2021,
+        "area": "Southbank",
+        "count": 43
+      },
+      {
+        "year": 2022,
+        "area": "Carlton",
+        "count": 144
+      },
+      {
+        "year": 2022,
+        "area": "Docklands",
+        "count": 65
+      },
+      {
+        "year": 2022,
+        "area": "East Melbourne",
+        "count": 25
+      },
+      {
+        "year": 2022,
+        "area": "Melbourne (CBD)",
+        "count": 539
+      },
+      {
+        "year": 2022,
+        "area": "North Melbourne",
+        "count": 55
+      },
+      {
+        "year": 2022,
+        "area": "Southbank",
+        "count": 43
+      },
+      {
+        "year": 2023,
+        "area": "Carlton",
+        "count": 156
+      },
+      {
+        "year": 2023,
+        "area": "Docklands",
+        "count": 57
+      },
+      {
+        "year": 2023,
+        "area": "East Melbourne",
+        "count": 25
+      },
+      {
+        "year": 2023,
+        "area": "Melbourne (CBD)",
+        "count": 539
+      },
+      {
+        "year": 2023,
+        "area": "North Melbourne",
+        "count": 58
+      },
+      {
+        "year": 2023,
+        "area": "Southbank",
+        "count": 47
+      },
+      {
+        "year": 2024,
+        "area": "Carlton",
+        "count": 156
+      },
+      {
+        "year": 2024,
+        "area": "Docklands",
+        "count": 57
+      },
+      {
+        "year": 2024,
+        "area": "East Melbourne",
+        "count": 25
+      },
+      {
+        "year": 2024,
+        "area": "Melbourne (CBD)",
+        "count": 574
+      },
+      {
+        "year": 2024,
+        "area": "North Melbourne",
+        "count": 58
+      },
+      {
+        "year": 2024,
+        "area": "Southbank",
+        "count": 47
+      }
+    ]
+  },
+  "facet": {
+    "field": "area",
+    "type": "nominal",
+    "columns": 3,
+    "title": null,
+    "sort": {
+      "op": "sum",
+      "field": "count",
+      "order": "descending"
+    },
+    "header": {
+      "labelFontSize": 12,
+      "labelFontWeight": "bold"
+    }
+  },
+  "spec": {
+    "width": 300,
+    "height": 180,
+    "mark": {
+      "type": "area",
+      "line": true,
+      "opacity": 0.4,
+      "color": "#6F4E37"
+    },
+    "encoding": {
+      "x": {
+        "field": "year",
+        "type": "ordinal",
+        "title": null,
+        "axis": {
+          "labelAngle": -45,
+          "values": [
+            2002,
+            2008,
+            2014,
+            2020,
+            2024
+          ]
+        }
+      },
+      "y": {
+        "field": "count",
+        "type": "quantitative",
+        "title": "Count",
+        "scale": {
+          "zero": false
+        }
+      },
+      "tooltip": [
+        {
+          "field": "area",
+          "type": "nominal"
+        },
+        {
+          "field": "year",
+          "type": "ordinal"
+        },
+        {
+          "field": "count",
+          "type": "quantitative"
+        }
+      ]
+    }
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

@@ -1,0 +1,597 @@
+﻿{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Price per Kilogram vs. Volume Imported",
+    "subtitle": "Each dot is one origin country \u2014 hover for details",
+    "fontSize": 16,
+    "subtitleFontSize": 12
+  },
+  "width": 700,
+  "height": 480,
+  "data": {
+    "values": [
+      {
+        "country": "Brazil",
+        "value_1000usd": 112085.05,
+        "quantity_kg": 25092500,
+        "price_per_kg_usd": 4.47,
+        "region": "South America",
+        "display_name": "Brazil",
+        "value_million": 112.09,
+        "quantity_tonnes": 25092.5
+      },
+      {
+        "country": "Colombia",
+        "value_1000usd": 63675.08,
+        "quantity_kg": 10989600,
+        "price_per_kg_usd": 5.79,
+        "region": "South America",
+        "display_name": "Colombia",
+        "value_million": 63.68,
+        "quantity_tonnes": 10989.6
+      },
+      {
+        "country": "Honduras",
+        "value_1000usd": 38886.62,
+        "quantity_kg": 7684420,
+        "price_per_kg_usd": 5.06,
+        "region": "Central America",
+        "display_name": "Honduras",
+        "value_million": 38.89,
+        "quantity_tonnes": 7684.4
+      },
+      {
+        "country": "Papua New Guinea",
+        "value_1000usd": 35246.98,
+        "quantity_kg": 7957620,
+        "price_per_kg_usd": 4.43,
+        "region": "Asia-Pacific",
+        "display_name": "Papua New Guinea",
+        "value_million": 35.25,
+        "quantity_tonnes": 7957.6
+      },
+      {
+        "country": "Vietnam",
+        "value_1000usd": 32196.75,
+        "quantity_kg": 12459700,
+        "price_per_kg_usd": 2.58,
+        "region": "Asia",
+        "display_name": "Vietnam",
+        "value_million": 32.2,
+        "quantity_tonnes": 12459.7
+      },
+      {
+        "country": "Ethiopia(excludes Eritrea)",
+        "value_1000usd": 29361.3,
+        "quantity_kg": 5496150,
+        "price_per_kg_usd": 5.34,
+        "region": "Africa",
+        "display_name": "Ethiopia",
+        "value_million": 29.36,
+        "quantity_tonnes": 5496.1
+      },
+      {
+        "country": "India",
+        "value_1000usd": 19415.73,
+        "quantity_kg": 5402900,
+        "price_per_kg_usd": 3.59,
+        "region": "Asia",
+        "display_name": "India",
+        "value_million": 19.42,
+        "quantity_tonnes": 5402.9
+      },
+      {
+        "country": "Nicaragua",
+        "value_1000usd": 14133.16,
+        "quantity_kg": 2624580,
+        "price_per_kg_usd": 5.38,
+        "region": "Central America",
+        "display_name": "Nicaragua",
+        "value_million": 14.13,
+        "quantity_tonnes": 2624.6
+      },
+      {
+        "country": "Peru",
+        "value_1000usd": 13476.81,
+        "quantity_kg": 2394050,
+        "price_per_kg_usd": 5.63,
+        "region": "South America",
+        "display_name": "Peru",
+        "value_million": 13.48,
+        "quantity_tonnes": 2394.1
+      },
+      {
+        "country": "Guatemala",
+        "value_1000usd": 13245.68,
+        "quantity_kg": 2164530,
+        "price_per_kg_usd": 6.12,
+        "region": "Central America",
+        "display_name": "Guatemala",
+        "value_million": 13.25,
+        "quantity_tonnes": 2164.5
+      },
+      {
+        "country": "Kenya",
+        "value_1000usd": 12135.35,
+        "quantity_kg": 1879230,
+        "price_per_kg_usd": 6.46,
+        "region": "Africa",
+        "display_name": "Kenya",
+        "value_million": 12.14,
+        "quantity_tonnes": 1879.2
+      },
+      {
+        "country": "Indonesia",
+        "value_1000usd": 8617.64,
+        "quantity_kg": 1631970,
+        "price_per_kg_usd": 5.28,
+        "region": "Asia",
+        "display_name": "Indonesia",
+        "value_million": 8.62,
+        "quantity_tonnes": 1632.0
+      },
+      {
+        "country": "El Salvador",
+        "value_1000usd": 6475.0,
+        "quantity_kg": 1050040,
+        "price_per_kg_usd": 6.17,
+        "region": "Central America",
+        "display_name": "El Salvador",
+        "value_million": 6.47,
+        "quantity_tonnes": 1050.0
+      },
+      {
+        "country": "Costa Rica",
+        "value_1000usd": 6411.01,
+        "quantity_kg": 1025930,
+        "price_per_kg_usd": 6.25,
+        "region": "Central America",
+        "display_name": "Costa Rica",
+        "value_million": 6.41,
+        "quantity_tonnes": 1025.9
+      },
+      {
+        "country": "Germany",
+        "value_1000usd": 5864.93,
+        "quantity_kg": 1467050,
+        "price_per_kg_usd": 4.0,
+        "region": "Europe",
+        "display_name": "Germany",
+        "value_million": 5.86,
+        "quantity_tonnes": 1467.0
+      },
+      {
+        "country": "Mexico",
+        "value_1000usd": 5759.14,
+        "quantity_kg": 1017500,
+        "price_per_kg_usd": 5.66,
+        "region": "Central America",
+        "display_name": "Mexico",
+        "value_million": 5.76,
+        "quantity_tonnes": 1017.5
+      },
+      {
+        "country": "Tanzania",
+        "value_1000usd": 4638.09,
+        "quantity_kg": 928460,
+        "price_per_kg_usd": 5.0,
+        "region": "Africa",
+        "display_name": "Tanzania",
+        "value_million": 4.64,
+        "quantity_tonnes": 928.5
+      },
+      {
+        "country": "Uganda",
+        "value_1000usd": 3451.81,
+        "quantity_kg": 818690,
+        "price_per_kg_usd": 4.22,
+        "region": "Africa",
+        "display_name": "Uganda",
+        "value_million": 3.45,
+        "quantity_tonnes": 818.7
+      },
+      {
+        "country": "Belgium",
+        "value_1000usd": 1397.3,
+        "quantity_kg": 347712,
+        "price_per_kg_usd": 4.02,
+        "region": "Europe",
+        "display_name": "Belgium",
+        "value_million": 1.4,
+        "quantity_tonnes": 347.7
+      },
+      {
+        "country": "Switzerland",
+        "value_1000usd": 1343.05,
+        "quantity_kg": 382638,
+        "price_per_kg_usd": 3.51,
+        "region": "Europe",
+        "display_name": "Switzerland",
+        "value_million": 1.34,
+        "quantity_tonnes": 382.6
+      },
+      {
+        "country": "East Timor",
+        "value_1000usd": 1319.8,
+        "quantity_kg": 232628,
+        "price_per_kg_usd": 5.67,
+        "region": "Asia-Pacific",
+        "display_name": "East Timor",
+        "value_million": 1.32,
+        "quantity_tonnes": 232.6
+      },
+      {
+        "country": "China",
+        "value_1000usd": 1313.2,
+        "quantity_kg": 282942,
+        "price_per_kg_usd": 4.64,
+        "region": "Asia",
+        "display_name": "China",
+        "value_million": 1.31,
+        "quantity_tonnes": 282.9
+      },
+      {
+        "country": "Rwanda",
+        "value_1000usd": 1305.84,
+        "quantity_kg": 167460,
+        "price_per_kg_usd": 7.8,
+        "region": "Africa",
+        "display_name": "Rwanda",
+        "value_million": 1.31,
+        "quantity_tonnes": 167.5
+      },
+      {
+        "country": "Panama",
+        "value_1000usd": 1267.39,
+        "quantity_kg": 208731,
+        "price_per_kg_usd": 6.07,
+        "region": "Central America",
+        "display_name": "Panama",
+        "value_million": 1.27,
+        "quantity_tonnes": 208.7
+      },
+      {
+        "country": "Djibouti",
+        "value_1000usd": 807.92,
+        "quantity_kg": 138938,
+        "price_per_kg_usd": 5.81,
+        "region": "Africa",
+        "display_name": "Djibouti",
+        "value_million": 0.81,
+        "quantity_tonnes": 138.9
+      },
+      {
+        "country": "Denmark",
+        "value_1000usd": 802.71,
+        "quantity_kg": 96000,
+        "price_per_kg_usd": 8.36,
+        "region": "Europe",
+        "display_name": "Denmark",
+        "value_million": 0.8,
+        "quantity_tonnes": 96.0
+      },
+      {
+        "country": "Singapore",
+        "value_1000usd": 752.92,
+        "quantity_kg": 155273,
+        "price_per_kg_usd": 4.85,
+        "region": "Asia",
+        "display_name": "Singapore",
+        "value_million": 0.75,
+        "quantity_tonnes": 155.3
+      },
+      {
+        "country": "Burundi",
+        "value_1000usd": 726.86,
+        "quantity_kg": 103560,
+        "price_per_kg_usd": 7.02,
+        "region": "Africa",
+        "display_name": "Burundi",
+        "value_million": 0.73,
+        "quantity_tonnes": 103.6
+      },
+      {
+        "country": "Western Sahara",
+        "value_1000usd": 422.17,
+        "quantity_kg": 96000,
+        "price_per_kg_usd": 4.4,
+        "region": "Africa",
+        "display_name": "Western Sahara",
+        "value_million": 0.42,
+        "quantity_tonnes": 96.0
+      },
+      {
+        "country": "Ecuador",
+        "value_1000usd": 370.99,
+        "quantity_kg": 23732,
+        "price_per_kg_usd": 15.63,
+        "region": "South America",
+        "display_name": "Ecuador",
+        "value_million": 0.37,
+        "quantity_tonnes": 23.7
+      },
+      {
+        "country": "Chile",
+        "value_1000usd": 303.2,
+        "quantity_kg": 38484,
+        "price_per_kg_usd": 7.88,
+        "region": "South America",
+        "display_name": "Chile",
+        "value_million": 0.3,
+        "quantity_tonnes": 38.5
+      },
+      {
+        "country": "Canada",
+        "value_1000usd": 293.62,
+        "quantity_kg": 63569,
+        "price_per_kg_usd": 4.62,
+        "region": "North America",
+        "display_name": "Canada",
+        "quantity_tonnes": 63.6
+      },
+      {
+        "country": "Bolivia",
+        "value_1000usd": 280.43,
+        "quantity_kg": 21230,
+        "price_per_kg_usd": 13.21,
+        "region": "South America",
+        "display_name": "Bolivia",
+        "quantity_tonnes": 21.2
+      },
+      {
+        "country": "United Kingdom",
+        "value_1000usd": 226.05,
+        "quantity_kg": 38518,
+        "price_per_kg_usd": 5.87,
+        "region": "Europe",
+        "display_name": "United Kingdom",
+        "quantity_tonnes": 38.5
+      },
+      {
+        "country": "United States",
+        "value_1000usd": 173.37,
+        "quantity_kg": 28845,
+        "price_per_kg_usd": 6.01,
+        "region": "North America",
+        "display_name": "United States",
+        "quantity_tonnes": 28.8
+      },
+      {
+        "country": "Zambia",
+        "value_1000usd": 132.65,
+        "quantity_kg": 19200,
+        "price_per_kg_usd": 6.91,
+        "region": "Africa",
+        "display_name": "Zambia",
+        "quantity_tonnes": 19.2
+      },
+      {
+        "country": "New Zealand",
+        "value_1000usd": 125.83,
+        "quantity_kg": 16400,
+        "price_per_kg_usd": 7.67,
+        "region": "Asia-Pacific",
+        "display_name": "New Zealand",
+        "quantity_tonnes": 16.4
+      },
+      {
+        "country": "Netherlands",
+        "value_1000usd": 114.11,
+        "quantity_kg": 19200,
+        "price_per_kg_usd": 5.94,
+        "region": "Europe",
+        "display_name": "Netherlands",
+        "quantity_tonnes": 19.2
+      },
+      {
+        "country": "Myanmar",
+        "value_1000usd": 104.68,
+        "quantity_kg": 11210,
+        "price_per_kg_usd": 9.34,
+        "region": "Asia",
+        "display_name": "Myanmar",
+        "quantity_tonnes": 11.2
+      },
+      {
+        "country": "Malaysia",
+        "value_1000usd": 95.43,
+        "quantity_kg": 19701,
+        "price_per_kg_usd": 4.84,
+        "region": "Asia",
+        "display_name": "Malaysia",
+        "quantity_tonnes": 19.7
+      },
+      {
+        "country": "Hungary",
+        "value_1000usd": 84.68,
+        "quantity_kg": 20700,
+        "price_per_kg_usd": 4.09,
+        "region": "Europe",
+        "display_name": "Hungary",
+        "quantity_tonnes": 20.7
+      },
+      {
+        "country": "Jamaica",
+        "value_1000usd": 75.32,
+        "quantity_kg": 1220,
+        "price_per_kg_usd": 61.74,
+        "region": "Central America",
+        "display_name": "Jamaica",
+        "quantity_tonnes": 1.2
+      },
+      {
+        "country": "Yemen",
+        "value_1000usd": 65.59,
+        "quantity_kg": 3460,
+        "price_per_kg_usd": 18.96,
+        "region": "Asia",
+        "display_name": "Yemen",
+        "quantity_tonnes": 3.5
+      },
+      {
+        "country": "Thailand",
+        "value_1000usd": 52.79,
+        "quantity_kg": 4657,
+        "price_per_kg_usd": 11.34,
+        "region": "Asia",
+        "display_name": "Thailand",
+        "quantity_tonnes": 4.7
+      },
+      {
+        "country": "Australia",
+        "value_1000usd": 49.45,
+        "quantity_kg": 19200,
+        "price_per_kg_usd": 2.58,
+        "region": "Asia-Pacific",
+        "display_name": "Australia",
+        "quantity_tonnes": 19.2
+      },
+      {
+        "country": "Italy",
+        "value_1000usd": 48.55,
+        "quantity_kg": 10040,
+        "price_per_kg_usd": 4.84,
+        "region": "Europe",
+        "display_name": "Italy",
+        "quantity_tonnes": 10.0
+      },
+      {
+        "country": "Lao PDR",
+        "value_1000usd": 33.27,
+        "quantity_kg": 9000,
+        "price_per_kg_usd": 3.7,
+        "region": "Asia",
+        "display_name": "Lao PDR",
+        "quantity_tonnes": 9.0
+      },
+      {
+        "country": "Nepal",
+        "value_1000usd": 27.94,
+        "quantity_kg": 1920,
+        "price_per_kg_usd": 14.55,
+        "region": "Asia",
+        "display_name": "Nepal",
+        "quantity_tonnes": 1.9
+      }
+    ]
+  },
+  "params": [
+    {
+      "name": "region_filter",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": ["All", "South America", "Central America", "Africa", "Asia", "Asia-Pacific", "Europe", "North America"],
+        "labels": ["All Regions", "South America", "Central America", "Africa", "Asia", "Asia-Pacific", "Europe", "North America"],
+        "name": "Filter region: "
+      }
+    },
+    {
+      "name": "dot_hover",
+      "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}
+    }
+  ],
+  "transform": [
+    {"filter": "region_filter === 'All' || datum.region === region_filter"}
+  ],
+  "mark": {
+    "type": "circle",
+    "cursor": "pointer"
+  },
+  "encoding": {
+    "x": {
+      "field": "quantity_tonnes",
+      "type": "quantitative",
+      "title": "Quantity Imported (tonnes)",
+      "scale": {
+        "type": "log"
+      },
+      "axis": {
+        "format": ",.0f"
+      }
+    },
+    "y": {
+      "field": "price_per_kg_usd",
+      "type": "quantitative",
+      "title": "Price per kg (USD)",
+      "scale": {
+        "zero": false
+      }
+    },
+    "size": {
+      "field": "value_1000usd",
+      "type": "quantitative",
+      "title": "Import Value ($1,000)",
+      "scale": {
+        "range": [
+          50,
+          1500
+        ]
+      }
+    },
+    "color": {
+      "field": "region",
+      "type": "nominal",
+      "title": "Region",
+      "scale": {
+        "domain": [
+          "South America",
+          "Central America",
+          "Africa",
+          "Asia",
+          "Asia-Pacific",
+          "Europe",
+          "North America"
+        ],
+        "range": [
+          "#2ecc71",
+          "#e67e22",
+          "#e74c3c",
+          "#3498db",
+          "#9b59b6",
+          "#95a5a6",
+          "#1abc9c"
+        ]
+      }
+    },
+    "opacity": {
+      "condition": {"param": "dot_hover", "empty": true, "value": 0.9},
+      "value": 0.15
+    },
+    "tooltip": [
+      {
+        "field": "display_name",
+        "type": "nominal",
+        "title": "Country"
+      },
+      {
+        "field": "price_per_kg_usd",
+        "type": "quantitative",
+        "title": "Price/kg (USD)",
+        "format": ".2f"
+      },
+      {
+        "field": "quantity_tonnes",
+        "type": "quantitative",
+        "title": "Quantity (tonnes)",
+        "format": ",.1f"
+      },
+      {
+        "field": "value_1000usd",
+        "type": "quantitative",
+        "title": "Value ($1,000)",
+        "format": ",.0f"
+      },
+      {
+        "field": "region",
+        "type": "nominal",
+        "title": "Region"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Growth of Cafés and Restaurants in Melbourne",
+    "subtitle": "Unique establishments per year, 2002–2024 — City of Melbourne CLUE data. Hover for details.",
+    "fontSize": 16,
+    "subtitleFontSize": 12
+  },
+  "width": 700,
+  "height": 420,
+  "data": {
+    "values": [
+      {"year": 2002, "count": 679},
+      {"year": 2003, "count": 693},
+      {"year": 2004, "count": 714},
+      {"year": 2005, "count": 752},
+      {"year": 2006, "count": 771},
+      {"year": 2007, "count": 803},
+      {"year": 2008, "count": 832},
+      {"year": 2009, "count": 880},
+      {"year": 2010, "count": 899},
+      {"year": 2011, "count": 926},
+      {"year": 2012, "count": 945},
+      {"year": 2013, "count": 984},
+      {"year": 2014, "count": 1008},
+      {"year": 2015, "count": 1028},
+      {"year": 2016, "count": 1064},
+      {"year": 2017, "count": 1065},
+      {"year": 2018, "count": 1076},
+      {"year": 2019, "count": 1074},
+      {"year": 2020, "count": 1009},
+      {"year": 2021, "count": 998},
+      {"year": 2022, "count": 963},
+      {"year": 2023, "count": 984},
+      {"year": 2024, "count": 1019}
+    ]
+  },
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "hover_year",
+          "select": {
+            "type": "point",
+            "on": "mousemove",
+            "nearest": true,
+            "fields": ["year"],
+            "clear": "mouseout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "area",
+        "line": true,
+        "color": "#6F4E37",
+        "opacity": 0.3
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "title": "Year",
+          "axis": {"labelAngle": -45}
+        },
+        "y": {
+          "field": "count",
+          "type": "quantitative",
+          "title": "Number of Establishments",
+          "scale": {"zero": false}
+        },
+        "tooltip": [
+          {"field": "year", "type": "ordinal", "title": "Year"},
+          {"field": "count", "type": "quantitative", "title": "Establishments"}
+        ]
+      }
+    },
+    {
+      "transform": [{"filter": {"param": "hover_year"}}],
+      "mark": {
+        "type": "rule",
+        "color": "#3C2415",
+        "opacity": 0.5,
+        "strokeWidth": 1.5,
+        "strokeDash": [3, 3]
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal"}
+      }
+    },
+    {
+      "transform": [{"filter": {"param": "hover_year"}}],
+      "mark": {
+        "type": "point",
+        "color": "#3C2415",
+        "size": 80,
+        "filled": true,
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal"},
+        "y": {"field": "count", "type": "quantitative"}
+      }
+    },
+    {
+      "data": {
+        "values": [{"year": "2020", "label": "COVID-19 Impact"}]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeDash": [4, 4],
+        "color": "#e74c3c",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal"}
+      }
+    },
+    {
+      "data": {
+        "values": [{"year": "2020", "count": 3500, "label": "COVID-19"}]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 11,
+        "color": "#e74c3c",
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal"},
+        "y": {"field": "count", "type": "quantitative"},
+        "text": {"field": "label", "type": "nominal"}
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

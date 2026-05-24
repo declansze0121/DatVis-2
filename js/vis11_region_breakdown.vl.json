@@ -1,0 +1,400 @@
+﻿{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Composition of Australia's Coffee Imports by Country Within Each Region",
+    "subtitle": "Proportional breakdown showing each country's contribution",
+    "fontSize": 16,
+    "subtitleFontSize": 12
+  },
+  "width": 700,
+  "height": 420,
+  "data": {
+    "values": [
+      {
+        "country": "Brazil",
+        "value_1000usd": 112085.05,
+        "quantity_kg": 25092500,
+        "price_per_kg_usd": 4.47,
+        "region": "South America",
+        "display_name": "Brazil",
+        "pct": 25.52
+      },
+      {
+        "country": "Colombia",
+        "value_1000usd": 63675.08,
+        "quantity_kg": 10989600,
+        "price_per_kg_usd": 5.79,
+        "region": "South America",
+        "display_name": "Colombia",
+        "pct": 14.5
+      },
+      {
+        "country": "Honduras",
+        "value_1000usd": 38886.62,
+        "quantity_kg": 7684420,
+        "price_per_kg_usd": 5.06,
+        "region": "Central America",
+        "display_name": "Honduras",
+        "pct": 8.85
+      },
+      {
+        "country": "Papua New Guinea",
+        "value_1000usd": 35246.98,
+        "quantity_kg": 7957620,
+        "price_per_kg_usd": 4.43,
+        "region": "Asia-Pacific",
+        "display_name": "Papua New Guinea",
+        "pct": 8.03
+      },
+      {
+        "country": "Vietnam",
+        "value_1000usd": 32196.75,
+        "quantity_kg": 12459700,
+        "price_per_kg_usd": 2.58,
+        "region": "Asia",
+        "display_name": "Vietnam",
+        "pct": 7.33
+      },
+      {
+        "country": "Ethiopia(excludes Eritrea)",
+        "value_1000usd": 29361.3,
+        "quantity_kg": 5496150,
+        "price_per_kg_usd": 5.34,
+        "region": "Africa",
+        "display_name": "Ethiopia",
+        "pct": 6.69
+      },
+      {
+        "country": "India",
+        "value_1000usd": 19415.73,
+        "quantity_kg": 5402900,
+        "price_per_kg_usd": 3.59,
+        "region": "Asia",
+        "display_name": "India",
+        "pct": 4.42
+      },
+      {
+        "country": "Nicaragua",
+        "value_1000usd": 14133.16,
+        "quantity_kg": 2624580,
+        "price_per_kg_usd": 5.38,
+        "region": "Central America",
+        "display_name": "Nicaragua",
+        "pct": 3.22
+      },
+      {
+        "country": "Peru",
+        "value_1000usd": 13476.81,
+        "quantity_kg": 2394050,
+        "price_per_kg_usd": 5.63,
+        "region": "South America",
+        "display_name": "Peru",
+        "pct": 3.07
+      },
+      {
+        "country": "Guatemala",
+        "value_1000usd": 13245.68,
+        "quantity_kg": 2164530,
+        "price_per_kg_usd": 6.12,
+        "region": "Central America",
+        "display_name": "Guatemala",
+        "pct": 3.02
+      },
+      {
+        "country": "Kenya",
+        "value_1000usd": 12135.35,
+        "quantity_kg": 1879230,
+        "price_per_kg_usd": 6.46,
+        "region": "Africa",
+        "display_name": "Kenya",
+        "pct": 2.76
+      },
+      {
+        "country": "Indonesia",
+        "value_1000usd": 8617.64,
+        "quantity_kg": 1631970,
+        "price_per_kg_usd": 5.28,
+        "region": "Asia",
+        "display_name": "Indonesia",
+        "pct": 1.96
+      },
+      {
+        "country": "El Salvador",
+        "value_1000usd": 6475.0,
+        "quantity_kg": 1050040,
+        "price_per_kg_usd": 6.17,
+        "region": "Central America",
+        "display_name": "El Salvador",
+        "pct": 1.47
+      },
+      {
+        "country": "Costa Rica",
+        "value_1000usd": 6411.01,
+        "quantity_kg": 1025930,
+        "price_per_kg_usd": 6.25,
+        "region": "Central America",
+        "display_name": "Costa Rica",
+        "pct": 1.46
+      },
+      {
+        "country": "Germany",
+        "value_1000usd": 5864.93,
+        "quantity_kg": 1467050,
+        "price_per_kg_usd": 4.0,
+        "region": "Europe",
+        "display_name": "Germany",
+        "pct": 1.34
+      },
+      {
+        "country": "Mexico",
+        "value_1000usd": 5759.14,
+        "quantity_kg": 1017500,
+        "price_per_kg_usd": 5.66,
+        "region": "Central America",
+        "display_name": "Mexico",
+        "pct": 1.31
+      },
+      {
+        "country": "Tanzania",
+        "value_1000usd": 4638.09,
+        "quantity_kg": 928460,
+        "price_per_kg_usd": 5.0,
+        "region": "Africa",
+        "display_name": "Tanzania",
+        "pct": 1.06
+      },
+      {
+        "country": "Uganda",
+        "value_1000usd": 3451.81,
+        "quantity_kg": 818690,
+        "price_per_kg_usd": 4.22,
+        "region": "Africa",
+        "display_name": "Uganda",
+        "pct": 0.79
+      },
+      {
+        "country": "Belgium",
+        "value_1000usd": 1397.3,
+        "quantity_kg": 347712,
+        "price_per_kg_usd": 4.02,
+        "region": "Europe",
+        "display_name": "Belgium",
+        "pct": 0.32
+      },
+      {
+        "country": "Switzerland",
+        "value_1000usd": 1343.05,
+        "quantity_kg": 382638,
+        "price_per_kg_usd": 3.51,
+        "region": "Europe",
+        "display_name": "Switzerland",
+        "pct": 0.31
+      },
+      {
+        "country": "East Timor",
+        "value_1000usd": 1319.8,
+        "quantity_kg": 232628,
+        "price_per_kg_usd": 5.67,
+        "region": "Asia-Pacific",
+        "display_name": "East Timor",
+        "pct": 0.3
+      },
+      {
+        "country": "China",
+        "value_1000usd": 1313.2,
+        "quantity_kg": 282942,
+        "price_per_kg_usd": 4.64,
+        "region": "Asia",
+        "display_name": "China",
+        "pct": 0.3
+      },
+      {
+        "country": "Rwanda",
+        "value_1000usd": 1305.84,
+        "quantity_kg": 167460,
+        "price_per_kg_usd": 7.8,
+        "region": "Africa",
+        "display_name": "Rwanda",
+        "pct": 0.3
+      },
+      {
+        "country": "Panama",
+        "value_1000usd": 1267.39,
+        "quantity_kg": 208731,
+        "price_per_kg_usd": 6.07,
+        "region": "Central America",
+        "display_name": "Panama",
+        "pct": 0.29
+      },
+      {
+        "country": "Djibouti",
+        "value_1000usd": 807.92,
+        "quantity_kg": 138938,
+        "price_per_kg_usd": 5.81,
+        "region": "Africa",
+        "display_name": "Djibouti",
+        "pct": 0.18
+      },
+      {
+        "country": "Denmark",
+        "value_1000usd": 802.71,
+        "quantity_kg": 96000,
+        "price_per_kg_usd": 8.36,
+        "region": "Europe",
+        "display_name": "Denmark",
+        "pct": 0.18
+      },
+      {
+        "country": "Singapore",
+        "value_1000usd": 752.92,
+        "quantity_kg": 155273,
+        "price_per_kg_usd": 4.85,
+        "region": "Asia",
+        "display_name": "Singapore",
+        "pct": 0.17
+      },
+      {
+        "country": "Burundi",
+        "value_1000usd": 726.86,
+        "quantity_kg": 103560,
+        "price_per_kg_usd": 7.02,
+        "region": "Africa",
+        "display_name": "Burundi",
+        "pct": 0.17
+      },
+      {
+        "country": "Western Sahara",
+        "value_1000usd": 422.17,
+        "quantity_kg": 96000,
+        "price_per_kg_usd": 4.4,
+        "region": "Africa",
+        "display_name": "Western Sahara",
+        "pct": 0.1
+      },
+      {
+        "country": "Ecuador",
+        "value_1000usd": 370.99,
+        "quantity_kg": 23732,
+        "price_per_kg_usd": 15.63,
+        "region": "South America",
+        "display_name": "Ecuador",
+        "pct": 0.08
+      },
+      {
+        "country": "Chile",
+        "value_1000usd": 303.2,
+        "quantity_kg": 38484,
+        "price_per_kg_usd": 7.88,
+        "region": "South America",
+        "display_name": "Chile",
+        "pct": 0.07
+      },
+      {
+        "country": "Canada",
+        "value_1000usd": 293.62,
+        "quantity_kg": 63569,
+        "price_per_kg_usd": 4.62,
+        "region": "North America",
+        "display_name": "Canada",
+        "pct": 0.07
+      },
+      {
+        "country": "Bolivia",
+        "value_1000usd": 280.43,
+        "quantity_kg": 21230,
+        "price_per_kg_usd": 13.21,
+        "region": "South America",
+        "display_name": "Bolivia",
+        "pct": 0.06
+      },
+      {
+        "country": "United Kingdom",
+        "value_1000usd": 226.05,
+        "quantity_kg": 38518,
+        "price_per_kg_usd": 5.87,
+        "region": "Europe",
+        "display_name": "United Kingdom",
+        "pct": 0.05
+      }
+    ]
+  },
+  "params": [
+    {"name": "selectedRegion", "value": null}
+  ],
+  "mark": {
+    "type": "bar",
+    "stroke": "#fff",
+    "strokeWidth": 0.5,
+    "cursor": "pointer"
+  },
+  "encoding": {
+    "x": {
+      "field": "value_1000usd",
+      "type": "quantitative",
+      "title": "Import Value (\u00d7$1,000 USD)",
+      "stack": "zero",
+      "axis": {
+        "format": ",.0f"
+      }
+    },
+    "y": {
+      "field": "region",
+      "type": "nominal",
+      "title": null,
+      "sort": "-x",
+      "axis": {
+        "labelFontSize": 12
+      }
+    },
+    "color": {
+      "field": "display_name",
+      "type": "nominal",
+      "title": "Country",
+      "scale": {
+        "scheme": "tableau20"
+      },
+      "legend": {
+        "columns": 3,
+        "orient": "bottom"
+      }
+    },
+    "order": {
+      "field": "value_1000usd",
+      "type": "quantitative",
+      "sort": "descending"
+    },
+    "opacity": {
+      "condition": {"test": "selectedRegion === null || datum.region === selectedRegion", "value": 1},
+      "value": 0.2
+    },
+    "tooltip": [
+      {
+        "field": "display_name",
+        "type": "nominal",
+        "title": "Country"
+      },
+      {
+        "field": "region",
+        "type": "nominal",
+        "title": "Region"
+      },
+      {
+        "field": "value_1000usd",
+        "type": "quantitative",
+        "title": "Value ($1,000)",
+        "format": ",.0f"
+      },
+      {
+        "field": "pct",
+        "type": "quantitative",
+        "title": "Share (%)",
+        "format": ".1f"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

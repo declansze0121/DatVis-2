@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From Bean to Cup — Australia's Coffee Story</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Vega-Lite -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Project CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Reading progress indicator -->
+  <div id="progress-bar" role="progressbar" aria-hidden="true"></div>
+
+  <!-- Skip to main content (keyboard / screen reader) -->
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <div class="hero-icon" aria-hidden="true"><i data-lucide="coffee"></i></div>
+    <h1>From Bean to Cup</h1>
+    <p class="subtitle">
+      Tracing Australia's coffee supply chain — from global origins
+      to Melbourne's café streets
+    </p>
+    <p class="byline">
+      FIT2179 · Data Visualisation 2 · 2026
+    </p>
+  </header>
+
+  <div class="container" id="main-content">
+
+    <!-- ===================== INTRO ===================== -->
+    <section aria-label="Introduction">
+      <p>
+        Australians are passionate about coffee. The nation imports nearly
+        <span class="highlight">95 million kilograms</span> of green coffee
+        beans each year from over 50 countries, fuelling a café industry
+        worth billions of dollars. Yet few people know where their daily
+        flat white actually comes from, or how Melbourne — often called the
+        coffee capital of Australia — has grown its café scene over two
+        decades.
+      </p>
+      <p>
+        This visualisation traces that journey in two parts:
+        <span class="highlight">the global supply chain</span> that brings
+        raw beans to Australia, and
+        <span class="highlight">the local café landscape</span> of Melbourne
+        where those beans are roasted, brewed, and served.
+      </p>
+
+      <div class="stat-row">
+        <div class="stat-card">
+          <div class="stat-icon" aria-hidden="true"><i data-lucide="trending-up"></i></div>
+          <div class="number">$439M</div>
+          <div class="label">Total green coffee imports (USD, 2023)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon" aria-hidden="true"><i data-lucide="package"></i></div>
+          <div class="number">94.7M kg</div>
+          <div class="label">Green coffee beans imported</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon" aria-hidden="true"><i data-lucide="globe"></i></div>
+          <div class="number">51</div>
+          <div class="label">Countries Australia imports from</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 01 break -->
+    <div class="chapter-break">
+      <span class="ch-num" aria-hidden="true">01</span>
+      <div class="ch-body">
+        <p class="ch-eyebrow"><i data-lucide="globe" aria-hidden="true"></i> Part One</p>
+        <p class="ch-title">The Global Picture</p>
+        <p class="ch-desc">Where do Australia's beans come from? Tracing the supply chain across more than 50 countries.</p>
+      </div>
+    </div>
+
+    <!-- ===================== PART 1 ===================== -->
+    <section aria-label="Part One — The Global Picture">
+      <h2>Where Does Australia's Coffee Come From?</h2>
+      <p>
+        Australia imports virtually all of its coffee — domestic production
+        is negligible. The map below shows every country that exported green
+        (unroasted) coffee beans to Australia in 2023, coloured by trade
+        value. Latin America dominates, but significant volumes also arrive
+        from Africa and Asia.
+      </p>
+
+      <div class="vis-wrapper">
+        <div id="vis1"></div>
+      </div>
+      <p class="caption">
+        Data source: UN Comtrade via World Bank WITS, 2023. HS Code 090111
+        (Coffee, not roasted or decaffeinated). Log colour scale used to
+        reveal smaller origins.
+      </p>
+
+      <div class="story-sep" aria-hidden="true">
+        <span class="story-sep-icon"><i data-lucide="globe"></i></span>
+      </div>
+
+      <p>
+        <span class="highlight">Brazil</span> is by far Australia's largest
+        coffee supplier, accounting for over $112 million in green bean
+        imports — roughly a quarter of the total. Colombia, Honduras, Papua
+        New Guinea, and Vietnam round out the top five. Together, these five
+        countries supply about 64% of Australia's coffee by value.
+      </p>
+
+      <blockquote class="pullquote">
+        Just <strong>five countries</strong> account for nearly two-thirds of everything Australia imports — yet the other 46 origins tell a richer story of diversity and specialty.
+      </blockquote>
+
+      <div class="vis-wrapper">
+        <div class="interaction-hint">
+          <i data-lucide="sliders-horizontal" aria-hidden="true"></i>
+          Use the <strong>dropdown</strong> to switch between import value, volume, and price per kg — the bars re-sort automatically
+        </div>
+        <div id="vis2"></div>
+      </div>
+
+      <div class="story-sep" aria-hidden="true">
+        <span class="story-sep-icon"><i data-lucide="map"></i></span>
+      </div>
+
+      <p>
+        When grouped by world region,
+        <span class="highlight">South America</span> supplies 43% of
+        Australia's coffee by value, followed by Central America (20%) and
+        Africa (12%). The regional split reveals Australia's reliance on
+        Latin American producers — a pattern common among Western importing
+        nations, but with a notable Asia-Pacific contribution from Papua
+        New Guinea.
+      </p>
+
+      <div class="vis-pair">
+        <div class="vis-wrapper">
+          <div class="interaction-hint">
+            <i data-lucide="mouse-pointer-2" aria-hidden="true"></i>
+            <strong>Click a slice</strong> to highlight that region in the chart →
+          </div>
+          <div id="vis3"></div>
+        </div>
+        <div class="vis-wrapper">
+          <div class="interaction-hint">
+            <i data-lucide="mouse-pointer-2" aria-hidden="true"></i>
+            <strong>Click a bar</strong> to focus on one region · click again to reset
+          </div>
+          <div id="vis11"></div>
+        </div>
+      </div>
+      <p class="caption">
+        Left: regional share of total import value. Right: breakdown of
+        countries within each region, showing which nations dominate their
+        regional segment.
+      </p>
+    </section>
+
+    <!-- Chapter 02 break -->
+    <div class="chapter-break">
+      <span class="ch-num" aria-hidden="true">02</span>
+      <div class="ch-body">
+        <p class="ch-eyebrow"><i data-lucide="bar-chart-2" aria-hidden="true"></i> Part Two</p>
+        <p class="ch-title">Price, Volume &amp; Quality</p>
+        <p class="ch-desc">Not all beans are equal. Exploring the wide spectrum from bulk commodity coffee to rare specialty lots.</p>
+      </div>
+    </div>
+
+    <!-- ===================== PART 2 ===================== -->
+    <section aria-label="Part Two — Price, Volume and Quality">
+      <h2>Not All Beans Are Equal</h2>
+      <p>
+        The scatter plot below reveals an important nuance in Australia's
+        coffee trade:
+        <span class="highlight">price per kilogram varies dramatically</span>
+        between origins. Some countries sell premium specialty beans at high
+        prices in small quantities, while others supply commodity-grade
+        coffee in bulk at lower per-kilogram costs.
+      </p>
+
+      <div class="vis-wrapper">
+        <div class="interaction-hint">
+          <i data-lucide="filter" aria-hidden="true"></i>
+          Filter by <strong>region</strong> using the dropdown &nbsp;·&nbsp;
+          <i data-lucide="mouse-pointer-2" aria-hidden="true"></i>
+          <strong>Hover</strong> a bubble to spotlight it and see details
+        </div>
+        <div id="vis4"></div>
+      </div>
+      <p class="caption">
+        Each bubble represents one origin country. Bubble size encodes total
+        import value. Note the logarithmic x-axis — the volume gap between
+        top and bottom origins spans several orders of magnitude.
+      </p>
+
+      <p>
+        Vietnam, for example, supplies large volumes at a relatively low
+        price per kilogram (~$2.58/kg), while Jamaican beans command over
+        $61/kg — reflecting Jamaica Blue Mountain's reputation as one of
+        the world's most prized coffees. This price spectrum reflects the
+        difference between <span class="highlight">commodity coffee</span>
+        (used for instant and blends) and
+        <span class="highlight">specialty coffee</span> (single-origin,
+        craft roasts).
+      </p>
+
+      <blockquote class="pullquote">
+        From <strong>$2.58/kg</strong> to over <strong>$61/kg</strong> — Australia's coffee imports span a 24× price range, from commodity bulk to rare single-estate lots.
+      </blockquote>
+
+      <div class="story-sep" aria-hidden="true">
+        <span class="story-sep-icon"><i data-lucide="star"></i></span>
+      </div>
+
+      <h2 class="h2-spaced">How Do the Origins Score on Quality?</h2>
+      <p>
+        By combining import data with the Coffee Quality Institute's cupping
+        database, we can compare the flavour profiles of Australia's top
+        suppliers. Each bean is scored on six attributes: aroma, flavour,
+        aftertaste, acidity, body, and balance.
+      </p>
+
+      <div class="vis-wrapper">
+        <div id="vis5"></div>
+      </div>
+      <p class="caption">
+        Data source: Coffee Quality Institute (CQI) via GitHub. Averages
+        computed from arabica samples with 5+ reviews per country. Only
+        countries that also appear in Australia's import data are shown.
+      </p>
+
+      <p>
+        The chart below directly tests whether
+        <span class="highlight">Australia pays more for higher-quality
+        coffee</span>. Each dot represents a country positioned by its CQI
+        quality score (x-axis) and how much Australia spends importing from
+        it (y-axis). The relationship is not straightforward — Colombia and
+        Ethiopia score high and attract high import spend, but Brazil
+        dominates by sheer volume despite moderate quality scores.
+      </p>
+
+      <div class="vis-wrapper">
+        <div id="vis10"></div>
+      </div>
+      <p class="caption">
+        This chart combines two independent datasets — UN Comtrade trade
+        data and CQI cupping scores — to explore whether quality predicts
+        import spending. Bubble size encodes import quantity.
+      </p>
+    </section>
+
+    <!-- Chapter 03 break -->
+    <div class="chapter-break">
+      <span class="ch-num" aria-hidden="true">03</span>
+      <div class="ch-body">
+        <p class="ch-eyebrow"><i data-lucide="map-pin" aria-hidden="true"></i> Part Three</p>
+        <p class="ch-title">Melbourne's Café Scene</p>
+        <p class="ch-desc">The city where those beans become culture. Two decades of growth, mapped street by street.</p>
+      </div>
+    </div>
+
+    <!-- ===================== PART 3 ===================== -->
+    <section aria-label="Part Three — Melbourne's Café Scene">
+      <h2>The City Where Coffee Comes to Life</h2>
+      <p>
+        Melbourne is widely regarded as Australia's coffee capital, with one
+        of the densest café cultures in the world. Using the City of
+        Melbourne's Census of Land Use and Employment (CLUE) data, we can
+        map every café and restaurant across the CBD and surrounding
+        suburbs.
+      </p>
+
+      <div class="vis-wrapper">
+        <div id="vis6"></div>
+      </div>
+      <p class="caption">
+        Map shows a representative sample of 600 establishments from 2024.
+        Point colour encodes the suburb area. Hover for details. Data: City
+        of Melbourne CLUE, industry code 4511 (Cafés and Restaurants).
+      </p>
+
+      <p>
+        The growth of Melbourne's café scene over two decades tells a
+        remarkable story. From around
+        <span class="highlight">679 establishments in 2002</span> to
+        <span class="highlight">over 3,400 in 2024</span>, the number of
+        cafés and restaurants has increased fivefold — with only a brief dip
+        during the COVID-19 pandemic.
+      </p>
+
+      <blockquote class="pullquote">
+        Melbourne's café count grew by <strong>5×</strong> in two decades — one new venue for roughly every two days, every year, for 22 years.
+      </blockquote>
+
+      <div class="vis-wrapper">
+        <div class="interaction-hint">
+          <i data-lucide="crosshair" aria-hidden="true"></i>
+          <strong>Hover</strong> along the chart to snap a crosshair to each year and read the exact establishment count
+        </div>
+        <div id="vis7"></div>
+      </div>
+
+      <div class="story-sep" aria-hidden="true">
+        <span class="story-sep-icon"><i data-lucide="coffee"></i></span>
+      </div>
+
+      <p>
+        The <span class="highlight">Melbourne CBD</span> unsurprisingly
+        dominates, but suburbs like Southbank, Docklands, and Carlton have
+        grown significantly. The heatmap below shows how each area's café
+        density has evolved year by year.
+      </p>
+
+      <div class="vis-wrapper">
+        <div class="interaction-hint">
+          <i data-lucide="rows-3" aria-hidden="true"></i>
+          <strong>Hover a row</strong> to highlight that suburb's trend across all years
+        </div>
+        <div id="vis9"></div>
+      </div>
+      <p class="caption">
+        Darker cells indicate a higher number of unique café and restaurant
+        establishments in that suburb for the given year.
+      </p>
+
+      <div class="vis-wrapper">
+        <div id="vis12"></div>
+      </div>
+      <p class="caption">
+        Small multiples showing the growth trajectory of Melbourne's six
+        busiest café areas. Note Docklands' rapid rise from near-zero in
+        the early 2000s as the precinct was developed.
+      </p>
+
+      <p>
+        Finally, a look at <span class="highlight">seating capacity</span>
+        reveals how different suburbs balance indoor and outdoor dining. The
+        CBD has the highest total seat count, but suburbs like Southbank and
+        Carlton offer a proportionally higher share of outdoor seating —
+        reflecting their waterfront and parkside settings.
+      </p>
+
+      <div class="vis-wrapper">
+        <div id="vis8"></div>
+      </div>
+    </section>
+
+    <!-- ===================== CONCLUSION ===================== -->
+    <section class="conclusion-section" aria-label="Conclusion">
+      <div class="conclusion-inner">
+        <div class="conclusion-icon" aria-hidden="true"><i data-lucide="coffee"></i></div>
+        <h2 class="conclusion-heading">From Bean to Cup — The Full Picture</h2>
+        <p>
+          Australia's coffee story is one of quiet complexity. On the surface it is simply a
+          morning ritual — a flat white, a long black, a table at a sunny Melbourne laneway.
+          But behind each cup lies a global supply chain spanning more than 50 countries,
+          $439 million in annual trade, and decades of shifting taste.
+        </p>
+        <p>
+          The data tells three interconnected stories. First, <span class="highlight">geography shapes flavour</span>:
+          the lion's share of Australia's beans come from Latin America, but Asia-Pacific origins
+          like Papua New Guinea and Vietnam play a significant and growing role. Second,
+          <span class="highlight">price is not a simple proxy for quality</span>: Brazil dominates
+          by sheer volume at mid-range prices, while Ethiopia and Colombia command both high scores
+          and high spend — and Jamaica Blue Mountain sits in a category of its own.
+        </p>
+        <p>
+          Third, and perhaps most visibly, <span class="highlight">Melbourne's café culture is a
+          genuine phenomenon</span>. Five times more venues today than in 2002. A brief but sharp
+          COVID dip that the industry quickly reversed. A suburban café scene spreading beyond the
+          CBD into Carlton, Southbank, and Docklands. The numbers confirm what most Australians
+          already sense: coffee is not just a beverage here — it is a way of life.
+        </p>
+        <div class="conclusion-stats">
+          <div class="c-stat">
+            <span class="c-stat-num">50+</span>
+            <span class="c-stat-label">source countries</span>
+          </div>
+          <div class="c-stat-divider" aria-hidden="true"></div>
+          <div class="c-stat">
+            <span class="c-stat-num">$439M</span>
+            <span class="c-stat-label">annual import value</span>
+          </div>
+          <div class="c-stat-divider" aria-hidden="true"></div>
+          <div class="c-stat">
+            <span class="c-stat-num">5×</span>
+            <span class="c-stat-label">Melbourne café growth</span>
+          </div>
+          <div class="c-stat-divider" aria-hidden="true"></div>
+          <div class="c-stat">
+            <span class="c-stat-num">22 yrs</span>
+            <span class="c-stat-label">of CLUE data tracked</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /.container -->
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <h4 class="footer-heading">About This Work</h4>
+        <p>Author: <strong>Declan Sutanto</strong> &nbsp;·&nbsp; Student ID: <strong>35541237</strong></p>
+        <p>FIT2179 Data Visualisation 2 &nbsp;·&nbsp; Semester 1 2026<br>Monash University</p>
+        <p>Last updated: <strong>24 May 2026</strong></p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Data Sources</h4>
+        <ul class="footer-sources">
+          <li>
+            <a href="https://wits.worldbank.org/trade/comtrade/en/country/AUS/year/2023/tradeflow/Imports/partner/ALL/product/090111"
+               target="_blank" rel="noopener">UN Comtrade via World Bank WITS</a>.
+            Australia's green coffee imports by country, 2023.
+          </li>
+          <li>
+            <a href="https://data.melbourne.vic.gov.au/explore/dataset/cafes-and-restaurants-with-seating-capacity/"
+               target="_blank" rel="noopener">City of Melbourne Open Data (CLUE)</a>.
+            Cafés and restaurants with seating capacity, 2002–2024.
+          </li>
+          <li>
+            <a href="https://github.com/jldbc/coffee-quality-database"
+               target="_blank" rel="noopener">Coffee Quality Institute Database</a>
+            (GitHub). Arabica cupping scores by country of origin.
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Acknowledgements</h4>
+        <p>Generative AI (Claude / ChatGPT / GitHub Copilot) was used for: copy-editing English narrative text, suggesting Vega-Lite spec patterns, and drafting CSS layout. All data wrangling, chart design, and analysis are the author's own work.</p>
+        <p>Icons from <a href="https://lucide.dev" target="_blank" rel="noopener">Lucide</a> (ISC). Fonts from Google Fonts.</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <i data-lucide="coffee" aria-hidden="true"></i>
+      Built with <a href="https://vega.github.io/vega-lite/" target="_blank" rel="noopener">Vega-Lite</a>
+      &nbsp;·&nbsp; FIT2179 Data Visualisation 2 &nbsp;·&nbsp; Monash University
+    </div>
+  </footer>
+
+  <!-- Project JS (loads and renders all Vega-Lite specs) -->
+  <script src="js/main.js"></script>
+
+  <!-- Activate Lucide icons -->
+  <script>lucide.createIcons();</script>
+
+</body>
+</html>

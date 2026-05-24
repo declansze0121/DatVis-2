@@ -1,0 +1,194 @@
+﻿{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Indoor vs. Outdoor Seating by Suburb (2024)",
+    "subtitle": "Total seat count across all caf\u00e9s and restaurants",
+    "fontSize": 16,
+    "subtitleFontSize": 12
+  },
+  "width": 700,
+  "height": 460,
+  "data": {
+    "values": [
+      {
+        "area": "Carlton",
+        "type": "Outdoor",
+        "seats": 3199
+      },
+      {
+        "area": "Carlton",
+        "type": "Indoor",
+        "seats": 10539
+      },
+      {
+        "area": "Docklands",
+        "type": "Indoor",
+        "seats": 9284
+      },
+      {
+        "area": "Docklands",
+        "type": "Outdoor",
+        "seats": 3387
+      },
+      {
+        "area": "East Melbourne",
+        "type": "Indoor",
+        "seats": 1567
+      },
+      {
+        "area": "East Melbourne",
+        "type": "Outdoor",
+        "seats": 451
+      },
+      {
+        "area": "Kensington",
+        "type": "Outdoor",
+        "seats": 208
+      },
+      {
+        "area": "Kensington",
+        "type": "Indoor",
+        "seats": 1064
+      },
+      {
+        "area": "Melbourne (CBD)",
+        "type": "Indoor",
+        "seats": 63408
+      },
+      {
+        "area": "Melbourne (CBD)",
+        "type": "Outdoor",
+        "seats": 9290
+      },
+      {
+        "area": "Melbourne (Remainder)",
+        "type": "Indoor",
+        "seats": 1695
+      },
+      {
+        "area": "Melbourne (Remainder)",
+        "type": "Outdoor",
+        "seats": 979
+      },
+      {
+        "area": "North Melbourne",
+        "type": "Indoor",
+        "seats": 2771
+      },
+      {
+        "area": "North Melbourne",
+        "type": "Outdoor",
+        "seats": 753
+      },
+      {
+        "area": "Parkville",
+        "type": "Indoor",
+        "seats": 1477
+      },
+      {
+        "area": "Parkville",
+        "type": "Outdoor",
+        "seats": 681
+      },
+      {
+        "area": "Port Melbourne",
+        "type": "Outdoor",
+        "seats": 299
+      },
+      {
+        "area": "Port Melbourne",
+        "type": "Indoor",
+        "seats": 613
+      },
+      {
+        "area": "South Yarra",
+        "type": "Outdoor",
+        "seats": 189
+      },
+      {
+        "area": "South Yarra",
+        "type": "Indoor",
+        "seats": 555
+      },
+      {
+        "area": "Southbank",
+        "type": "Outdoor",
+        "seats": 3784
+      },
+      {
+        "area": "Southbank",
+        "type": "Indoor",
+        "seats": 12357
+      },
+      {
+        "area": "West Melbourne (Residential)",
+        "type": "Indoor",
+        "seats": 1429
+      },
+      {
+        "area": "West Melbourne (Residential)",
+        "type": "Outdoor",
+        "seats": 244
+      }
+    ]
+  },
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 2
+  },
+  "encoding": {
+    "y": {
+      "field": "area",
+      "type": "nominal",
+      "sort": "-x",
+      "title": null,
+      "axis": {
+        "labelFontSize": 11
+      }
+    },
+    "x": {
+      "field": "seats",
+      "type": "quantitative",
+      "title": "Total Seats",
+      "stack": "zero"
+    },
+    "color": {
+      "field": "type",
+      "type": "nominal",
+      "title": "Seating Type",
+      "scale": {
+        "domain": [
+          "Indoor",
+          "Outdoor"
+        ],
+        "range": [
+          "#6F4E37",
+          "#D4A574"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "area",
+        "type": "nominal",
+        "title": "Area"
+      },
+      {
+        "field": "type",
+        "type": "nominal",
+        "title": "Type"
+      },
+      {
+        "field": "seats",
+        "type": "quantitative",
+        "title": "Seats",
+        "format": ","
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

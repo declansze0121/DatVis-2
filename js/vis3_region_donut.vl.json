@@ -1,0 +1,120 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Coffee Import Share by Region",
+    "subtitle": "Percentage of total import value, 2023",
+    "fontSize": 16,
+    "subtitleFontSize": 12
+  },
+  "width": 380,
+  "height": 380,
+  "data": {
+    "values": [
+      {
+        "region": "South America",
+        "value_1000usd": 190191.56,
+        "value_million": 190.19,
+        "pct": 43.3
+      },
+      {
+        "region": "Central America",
+        "value_1000usd": 86253.32,
+        "value_million": 86.25,
+        "pct": 19.6
+      },
+      {
+        "region": "Asia",
+        "value_1000usd": 62686.74,
+        "value_million": 62.69,
+        "pct": 14.3
+      },
+      {
+        "region": "Africa",
+        "value_1000usd": 52981.99,
+        "value_million": 52.98,
+        "pct": 12.1
+      },
+      {
+        "region": "Asia-Pacific",
+        "value_1000usd": 36742.06,
+        "value_million": 36.74,
+        "pct": 8.4
+      },
+      {
+        "region": "Europe",
+        "value_1000usd": 9882.73,
+        "value_million": 9.88,
+        "pct": 2.3
+      },
+      {
+        "region": "North America",
+        "value_1000usd": 466.99,
+        "value_million": 0.47,
+        "pct": 0.1
+      }
+    ]
+  },
+  "mark": {
+    "type": "arc",
+    "innerRadius": 70,
+    "outerRadius": 150,
+    "stroke": "#fff",
+    "strokeWidth": 2
+  },
+  "encoding": {
+    "theta": {
+      "field": "value_1000usd",
+      "type": "quantitative",
+      "stack": true
+    },
+    "color": {
+      "field": "region",
+      "type": "nominal",
+      "title": "Region",
+      "scale": {
+        "domain": [
+          "South America",
+          "Central America",
+          "Africa",
+          "Asia",
+          "Asia-Pacific",
+          "Europe",
+          "North America"
+        ],
+        "range": [
+          "#2ecc71",
+          "#e67e22",
+          "#e74c3c",
+          "#3498db",
+          "#9b59b6",
+          "#95a5a6",
+          "#1abc9c"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "region",
+        "type": "nominal",
+        "title": "Region"
+      },
+      {
+        "field": "value_1000usd",
+        "type": "quantitative",
+        "title": "Value (\u00d7$1,000 USD)",
+        "format": ",.0f"
+      },
+      {
+        "field": "pct",
+        "type": "quantitative",
+        "title": "Share (%)",
+        "format": ".1f"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

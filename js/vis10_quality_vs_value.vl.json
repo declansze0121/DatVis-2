@@ -1,0 +1,389 @@
+﻿{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Does Australia Pay More for Better Coffee?",
+    "subtitle": "CQI quality score vs. import value \u2014 combining two independent data sources",
+    "fontSize": 16,
+    "subtitleFontSize": 12
+  },
+  "width": 700,
+  "height": 480,
+  "data": {
+    "values": [
+      {
+        "country": "United States",
+        "import_country": "United States",
+        "aroma": 7.89,
+        "flavor": 8.14,
+        "aftertaste": 7.99,
+        "acidity": 8.06,
+        "body": 7.94,
+        "balance": 7.95,
+        "total_score": 85.98,
+        "samples": 8,
+        "import_value": 173.37,
+        "import_qty": 28845,
+        "import_value_million": 0.17
+      },
+      {
+        "country": "Ethiopia",
+        "import_country": "Ethiopia(excludes Eritrea)",
+        "aroma": 7.9,
+        "flavor": 8.01,
+        "aftertaste": 7.89,
+        "acidity": 8.04,
+        "body": 7.92,
+        "balance": 7.97,
+        "total_score": 85.48,
+        "samples": 44,
+        "import_value": 29361.3,
+        "import_qty": 5496150,
+        "import_value_million": 29.36
+      },
+      {
+        "country": "Kenya",
+        "import_country": "Kenya",
+        "aroma": 7.79,
+        "flavor": 7.78,
+        "aftertaste": 7.71,
+        "acidity": 7.87,
+        "body": 7.73,
+        "balance": 7.8,
+        "total_score": 84.31,
+        "samples": 25,
+        "import_value": 12135.35,
+        "import_qty": 1879230,
+        "import_value_million": 12.14
+      },
+      {
+        "country": "Uganda",
+        "import_country": "Uganda",
+        "aroma": 7.9,
+        "flavor": 7.75,
+        "aftertaste": 7.6,
+        "acidity": 7.71,
+        "body": 7.69,
+        "balance": 7.66,
+        "total_score": 84.05,
+        "samples": 26,
+        "import_value": 3451.81,
+        "import_qty": 818690,
+        "import_value_million": 3.45
+      },
+      {
+        "country": "Colombia",
+        "import_country": "Colombia",
+        "aroma": 7.65,
+        "flavor": 7.6,
+        "aftertaste": 7.52,
+        "acidity": 7.56,
+        "body": 7.61,
+        "balance": 7.71,
+        "total_score": 83.11,
+        "samples": 183,
+        "import_value": 63675.08,
+        "import_qty": 10989600,
+        "import_value_million": 63.68
+      },
+      {
+        "country": "El Salvador",
+        "import_country": "El Salvador",
+        "aroma": 7.67,
+        "flavor": 7.65,
+        "aftertaste": 7.57,
+        "acidity": 7.59,
+        "body": 7.61,
+        "balance": 7.71,
+        "total_score": 83.05,
+        "samples": 21,
+        "import_value": 6475.0,
+        "import_qty": 1050040,
+        "import_value_million": 6.47
+      },
+      {
+        "country": "China",
+        "import_country": "China",
+        "aroma": 7.64,
+        "flavor": 7.63,
+        "aftertaste": 7.48,
+        "acidity": 7.58,
+        "body": 7.57,
+        "balance": 7.55,
+        "total_score": 82.93,
+        "samples": 16,
+        "import_value": 1313.2,
+        "import_qty": 282942,
+        "import_value_million": 1.31
+      },
+      {
+        "country": "Costa Rica",
+        "import_country": "Costa Rica",
+        "aroma": 7.67,
+        "flavor": 7.54,
+        "aftertaste": 7.53,
+        "acidity": 7.57,
+        "body": 7.54,
+        "balance": 7.64,
+        "total_score": 82.79,
+        "samples": 51,
+        "import_value": 6411.01,
+        "import_qty": 1025930,
+        "import_value_million": 6.41
+      },
+      {
+        "country": "Indonesia",
+        "import_country": "Indonesia",
+        "aroma": 7.65,
+        "flavor": 7.57,
+        "aftertaste": 7.42,
+        "acidity": 7.49,
+        "body": 7.63,
+        "balance": 7.52,
+        "total_score": 82.57,
+        "samples": 20,
+        "import_value": 8617.64,
+        "import_qty": 1631970,
+        "import_value_million": 8.62
+      },
+      {
+        "country": "Thailand",
+        "import_country": "Thailand",
+        "aroma": 7.48,
+        "flavor": 7.53,
+        "aftertaste": 7.47,
+        "acidity": 7.6,
+        "body": 7.55,
+        "balance": 7.52,
+        "total_score": 82.57,
+        "samples": 32,
+        "import_value": 52.79,
+        "import_qty": 4657,
+        "import_value_million": 0.05
+      },
+      {
+        "country": "Peru",
+        "import_country": "Peru",
+        "aroma": 7.69,
+        "flavor": 7.66,
+        "aftertaste": 7.54,
+        "acidity": 7.7,
+        "body": 7.8,
+        "balance": 7.67,
+        "total_score": 82.53,
+        "samples": 10,
+        "import_value": 13476.81,
+        "import_qty": 2394050,
+        "import_value_million": 13.48
+      },
+      {
+        "country": "Brazil",
+        "import_country": "Brazil",
+        "aroma": 7.55,
+        "flavor": 7.57,
+        "aftertaste": 7.44,
+        "acidity": 7.51,
+        "body": 7.54,
+        "balance": 7.53,
+        "total_score": 82.41,
+        "samples": 132,
+        "import_value": 112085.05,
+        "import_qty": 25092500,
+        "import_value_million": 112.09
+      },
+      {
+        "country": "Vietnam",
+        "import_country": "Vietnam",
+        "aroma": 7.48,
+        "flavor": 7.48,
+        "aftertaste": 7.3,
+        "acidity": 7.44,
+        "body": 7.63,
+        "balance": 7.55,
+        "total_score": 82.27,
+        "samples": 7,
+        "import_value": 32196.75,
+        "import_qty": 12459700,
+        "import_value_million": 32.2
+      },
+      {
+        "country": "Guatemala",
+        "import_country": "Guatemala",
+        "aroma": 7.54,
+        "flavor": 7.49,
+        "aftertaste": 7.27,
+        "acidity": 7.6,
+        "body": 7.48,
+        "balance": 7.47,
+        "total_score": 81.85,
+        "samples": 181,
+        "import_value": 13245.68,
+        "import_qty": 2164530,
+        "import_value_million": 13.25
+      },
+      {
+        "country": "Mexico",
+        "import_country": "Mexico",
+        "aroma": 7.46,
+        "flavor": 7.38,
+        "aftertaste": 7.23,
+        "acidity": 7.43,
+        "body": 7.38,
+        "balance": 7.33,
+        "total_score": 80.89,
+        "samples": 236,
+        "import_value": 5759.14,
+        "import_qty": 1017500,
+        "import_value_million": 5.76
+      },
+      {
+        "country": "Myanmar",
+        "import_country": "Myanmar",
+        "aroma": 7.3,
+        "flavor": 7.33,
+        "aftertaste": 7.12,
+        "acidity": 7.41,
+        "body": 7.27,
+        "balance": 7.13,
+        "total_score": 80.75,
+        "samples": 8,
+        "import_value": 104.68,
+        "import_qty": 11210,
+        "import_value_million": 0.1
+      },
+      {
+        "country": "Nicaragua",
+        "import_country": "Nicaragua",
+        "aroma": 7.33,
+        "flavor": 7.32,
+        "aftertaste": 7.2,
+        "acidity": 7.27,
+        "body": 7.4,
+        "balance": 7.28,
+        "total_score": 80.46,
+        "samples": 26,
+        "import_value": 14133.16,
+        "import_qty": 2624580,
+        "import_value_million": 14.13
+      },
+      {
+        "country": "Honduras",
+        "import_country": "Honduras",
+        "aroma": 7.29,
+        "flavor": 7.23,
+        "aftertaste": 7.06,
+        "acidity": 7.23,
+        "body": 7.24,
+        "balance": 7.16,
+        "total_score": 79.36,
+        "samples": 53,
+        "import_value": 38886.62,
+        "import_qty": 7684420,
+        "import_value_million": 38.89
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        "opacity": 0.8
+      },
+      "encoding": {
+        "x": {
+          "field": "total_score",
+          "type": "quantitative",
+          "title": "Total Cup Points (CQI Quality Score)",
+          "scale": {
+            "domain": [
+              78,
+              87
+            ]
+          }
+        },
+        "y": {
+          "field": "import_value",
+          "type": "quantitative",
+          "title": "Import Value (\u00d7$1,000 USD)",
+          "scale": {
+            "type": "log"
+          },
+          "axis": {
+            "format": ",.0f"
+          }
+        },
+        "size": {
+          "field": "import_qty",
+          "type": "quantitative",
+          "title": "Import Quantity (kg)",
+          "scale": {
+            "range": [
+              80,
+              1200
+            ]
+          },
+          "legend": null
+        },
+        "color": {
+          "value": "#6F4E37"
+        },
+        "tooltip": [
+          {
+            "field": "country",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "total_score",
+            "type": "quantitative",
+            "title": "Quality Score",
+            "format": ".1f"
+          },
+          {
+            "field": "import_value",
+            "type": "quantitative",
+            "title": "Import Value ($1,000)",
+            "format": ",.0f"
+          },
+          {
+            "field": "import_qty",
+            "type": "quantitative",
+            "title": "Quantity (kg)",
+            "format": ",.0f"
+          },
+          {
+            "field": "samples",
+            "type": "quantitative",
+            "title": "CQI Samples"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "fontSize": 11
+      },
+      "encoding": {
+        "x": {
+          "field": "total_score",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "import_value",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "country",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

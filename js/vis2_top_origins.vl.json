@@ -1,0 +1,255 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Top 15 Green Coffee Bean Origins",
+    "subtitle": "Australia, 2023 — UN Comtrade data. Use the dropdown to switch metrics.",
+    "fontSize": 16,
+    "subtitleFontSize": 12
+  },
+  "width": 700,
+  "height": 460,
+  "params": [
+    {
+      "name": "metric",
+      "value": "value_million",
+      "bind": {
+        "input": "select",
+        "options": ["value_million", "quantity_kg", "price_per_kg_usd"],
+        "labels": ["Import Value (USD M)", "Volume (kg)", "Price per kg (USD)"],
+        "name": "View by: "
+      }
+    },
+    {
+      "name": "bar_hover",
+      "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}
+    }
+  ],
+  "transform": [
+    {"calculate": "datum[metric]", "as": "selected_metric"}
+  ],
+  "data": {
+    "values": [
+      {
+        "country": "Brazil",
+        "value_1000usd": 112085.05,
+        "quantity_kg": 25092500,
+        "price_per_kg_usd": 4.47,
+        "region": "South America",
+        "display_name": "Brazil",
+        "value_million": 112.09
+      },
+      {
+        "country": "Colombia",
+        "value_1000usd": 63675.08,
+        "quantity_kg": 10989600,
+        "price_per_kg_usd": 5.79,
+        "region": "South America",
+        "display_name": "Colombia",
+        "value_million": 63.68
+      },
+      {
+        "country": "Honduras",
+        "value_1000usd": 38886.62,
+        "quantity_kg": 7684420,
+        "price_per_kg_usd": 5.06,
+        "region": "Central America",
+        "display_name": "Honduras",
+        "value_million": 38.89
+      },
+      {
+        "country": "Papua New Guinea",
+        "value_1000usd": 35246.98,
+        "quantity_kg": 7957620,
+        "price_per_kg_usd": 4.43,
+        "region": "Asia-Pacific",
+        "display_name": "Papua New Guinea",
+        "value_million": 35.25
+      },
+      {
+        "country": "Vietnam",
+        "value_1000usd": 32196.75,
+        "quantity_kg": 12459700,
+        "price_per_kg_usd": 2.58,
+        "region": "Asia",
+        "display_name": "Vietnam",
+        "value_million": 32.2
+      },
+      {
+        "country": "Ethiopia(excludes Eritrea)",
+        "value_1000usd": 29361.3,
+        "quantity_kg": 5496150,
+        "price_per_kg_usd": 5.34,
+        "region": "Africa",
+        "display_name": "Ethiopia",
+        "value_million": 29.36
+      },
+      {
+        "country": "India",
+        "value_1000usd": 19415.73,
+        "quantity_kg": 5402900,
+        "price_per_kg_usd": 3.59,
+        "region": "Asia",
+        "display_name": "India",
+        "value_million": 19.42
+      },
+      {
+        "country": "Nicaragua",
+        "value_1000usd": 14133.16,
+        "quantity_kg": 2624580,
+        "price_per_kg_usd": 5.38,
+        "region": "Central America",
+        "display_name": "Nicaragua",
+        "value_million": 14.13
+      },
+      {
+        "country": "Peru",
+        "value_1000usd": 13476.81,
+        "quantity_kg": 2394050,
+        "price_per_kg_usd": 5.63,
+        "region": "South America",
+        "display_name": "Peru",
+        "value_million": 13.48
+      },
+      {
+        "country": "Guatemala",
+        "value_1000usd": 13245.68,
+        "quantity_kg": 2164530,
+        "price_per_kg_usd": 6.12,
+        "region": "Central America",
+        "display_name": "Guatemala",
+        "value_million": 13.25
+      },
+      {
+        "country": "Kenya",
+        "value_1000usd": 12135.35,
+        "quantity_kg": 1879230,
+        "price_per_kg_usd": 6.46,
+        "region": "Africa",
+        "display_name": "Kenya",
+        "value_million": 12.14
+      },
+      {
+        "country": "Indonesia",
+        "value_1000usd": 8617.64,
+        "quantity_kg": 1631970,
+        "price_per_kg_usd": 5.28,
+        "region": "Asia",
+        "display_name": "Indonesia",
+        "value_million": 8.62
+      },
+      {
+        "country": "El Salvador",
+        "value_1000usd": 6475.0,
+        "quantity_kg": 1050040,
+        "price_per_kg_usd": 6.17,
+        "region": "Central America",
+        "display_name": "El Salvador",
+        "value_million": 6.47
+      },
+      {
+        "country": "Costa Rica",
+        "value_1000usd": 6411.01,
+        "quantity_kg": 1025930,
+        "price_per_kg_usd": 6.25,
+        "region": "Central America",
+        "display_name": "Costa Rica",
+        "value_million": 6.41
+      },
+      {
+        "country": "Germany",
+        "value_1000usd": 5864.93,
+        "quantity_kg": 1467050,
+        "price_per_kg_usd": 4.0,
+        "region": "Europe",
+        "display_name": "Germany",
+        "value_million": 5.86
+      }
+    ]
+  },
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3,
+    "cursor": "pointer"
+  },
+  "encoding": {
+    "y": {
+      "field": "display_name",
+      "type": "nominal",
+      "sort": {"field": "selected_metric", "order": "descending"},
+      "title": null,
+      "axis": {
+        "labelFontSize": 12
+      }
+    },
+    "x": {
+      "field": "selected_metric",
+      "type": "quantitative",
+      "title": {"expr": "metric == 'value_million' ? 'Import Value (USD M)' : metric == 'quantity_kg' ? 'Volume (kg)' : 'Price per kg (USD)'"},
+      "axis": {
+        "format": "~s"
+      }
+    },
+    "color": {
+      "field": "region",
+      "type": "nominal",
+      "title": "Region",
+      "scale": {
+        "domain": [
+          "South America",
+          "Central America",
+          "Africa",
+          "Asia",
+          "Asia-Pacific",
+          "Europe"
+        ],
+        "range": [
+          "#2ecc71",
+          "#e67e22",
+          "#e74c3c",
+          "#3498db",
+          "#9b59b6",
+          "#95a5a6"
+        ]
+      }
+    },
+    "opacity": {
+      "condition": {"param": "bar_hover", "empty": true, "value": 1},
+      "value": 0.35
+    },
+    "tooltip": [
+      {
+        "field": "display_name",
+        "type": "nominal",
+        "title": "Country"
+      },
+      {
+        "field": "value_million",
+        "type": "quantitative",
+        "title": "Import Value (USD M)",
+        "format": ".2f"
+      },
+      {
+        "field": "quantity_kg",
+        "type": "quantitative",
+        "title": "Volume (kg)",
+        "format": ",.0f"
+      },
+      {
+        "field": "price_per_kg_usd",
+        "type": "quantitative",
+        "title": "Price per kg (USD)",
+        "format": ".2f"
+      },
+      {
+        "field": "region",
+        "type": "nominal",
+        "title": "Region"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

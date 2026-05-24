@@ -1,0 +1,490 @@
+﻿{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Where Australia Sources Its Green Coffee Beans (2023)",
+    "subtitle": "Import value in thousands of USD by country of origin",
+    "fontSize": 16,
+    "subtitleFontSize": 12
+  },
+  "width": 780,
+  "height": 500,
+  "projection": {
+    "type": "equalEarth"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://vega.github.io/vega-datasets/data/world-110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e8e8e8",
+        "stroke": "#fff",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://vega.github.io/vega-datasets/data/world-110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
+      },
+      "transform": [
+        {
+          "lookup": "id",
+          "from": {
+            "data": {
+              "values": [
+                {
+                  "country": "Brazil",
+                  "value_1000usd": 112085.05,
+                  "quantity_kg": 25092500,
+                  "price_per_kg_usd": 4.47,
+                  "id": 76
+                },
+                {
+                  "country": "Colombia",
+                  "value_1000usd": 63675.08,
+                  "quantity_kg": 10989600,
+                  "price_per_kg_usd": 5.79,
+                  "id": 170
+                },
+                {
+                  "country": "Honduras",
+                  "value_1000usd": 38886.62,
+                  "quantity_kg": 7684420,
+                  "price_per_kg_usd": 5.06,
+                  "id": 340
+                },
+                {
+                  "country": "Papua New Guinea",
+                  "value_1000usd": 35246.98,
+                  "quantity_kg": 7957620,
+                  "price_per_kg_usd": 4.43,
+                  "id": 598
+                },
+                {
+                  "country": "Vietnam",
+                  "value_1000usd": 32196.75,
+                  "quantity_kg": 12459700,
+                  "price_per_kg_usd": 2.58,
+                  "id": 704
+                },
+                {
+                  "country": "Ethiopia(excludes Eritrea)",
+                  "value_1000usd": 29361.3,
+                  "quantity_kg": 5496150,
+                  "price_per_kg_usd": 5.34,
+                  "id": 231
+                },
+                {
+                  "country": "India",
+                  "value_1000usd": 19415.73,
+                  "quantity_kg": 5402900,
+                  "price_per_kg_usd": 3.59,
+                  "id": 356
+                },
+                {
+                  "country": "Nicaragua",
+                  "value_1000usd": 14133.16,
+                  "quantity_kg": 2624580,
+                  "price_per_kg_usd": 5.38,
+                  "id": 558
+                },
+                {
+                  "country": "Peru",
+                  "value_1000usd": 13476.81,
+                  "quantity_kg": 2394050,
+                  "price_per_kg_usd": 5.63,
+                  "id": 604
+                },
+                {
+                  "country": "Guatemala",
+                  "value_1000usd": 13245.68,
+                  "quantity_kg": 2164530,
+                  "price_per_kg_usd": 6.12,
+                  "id": 320
+                },
+                {
+                  "country": "Kenya",
+                  "value_1000usd": 12135.35,
+                  "quantity_kg": 1879230,
+                  "price_per_kg_usd": 6.46,
+                  "id": 404
+                },
+                {
+                  "country": "Indonesia",
+                  "value_1000usd": 8617.64,
+                  "quantity_kg": 1631970,
+                  "price_per_kg_usd": 5.28,
+                  "id": 360
+                },
+                {
+                  "country": "El Salvador",
+                  "value_1000usd": 6475.0,
+                  "quantity_kg": 1050040,
+                  "price_per_kg_usd": 6.17,
+                  "id": 222
+                },
+                {
+                  "country": "Costa Rica",
+                  "value_1000usd": 6411.01,
+                  "quantity_kg": 1025930,
+                  "price_per_kg_usd": 6.25,
+                  "id": 188
+                },
+                {
+                  "country": "Germany",
+                  "value_1000usd": 5864.93,
+                  "quantity_kg": 1467050,
+                  "price_per_kg_usd": 4.0,
+                  "id": 276
+                },
+                {
+                  "country": "Mexico",
+                  "value_1000usd": 5759.14,
+                  "quantity_kg": 1017500,
+                  "price_per_kg_usd": 5.66,
+                  "id": 484
+                },
+                {
+                  "country": "Tanzania",
+                  "value_1000usd": 4638.09,
+                  "quantity_kg": 928460,
+                  "price_per_kg_usd": 5.0,
+                  "id": 834
+                },
+                {
+                  "country": "Uganda",
+                  "value_1000usd": 3451.81,
+                  "quantity_kg": 818690,
+                  "price_per_kg_usd": 4.22,
+                  "id": 800
+                },
+                {
+                  "country": "Belgium",
+                  "value_1000usd": 1397.3,
+                  "quantity_kg": 347712,
+                  "price_per_kg_usd": 4.02,
+                  "id": 56
+                },
+                {
+                  "country": "Switzerland",
+                  "value_1000usd": 1343.05,
+                  "quantity_kg": 382638,
+                  "price_per_kg_usd": 3.51,
+                  "id": 756
+                },
+                {
+                  "country": "East Timor",
+                  "value_1000usd": 1319.8,
+                  "quantity_kg": 232628,
+                  "price_per_kg_usd": 5.67,
+                  "id": 626
+                },
+                {
+                  "country": "China",
+                  "value_1000usd": 1313.2,
+                  "quantity_kg": 282942,
+                  "price_per_kg_usd": 4.64,
+                  "id": 156
+                },
+                {
+                  "country": "Rwanda",
+                  "value_1000usd": 1305.84,
+                  "quantity_kg": 167460,
+                  "price_per_kg_usd": 7.8,
+                  "id": 646
+                },
+                {
+                  "country": "Panama",
+                  "value_1000usd": 1267.39,
+                  "quantity_kg": 208731,
+                  "price_per_kg_usd": 6.07,
+                  "id": 591
+                },
+                {
+                  "country": "Djibouti",
+                  "value_1000usd": 807.92,
+                  "quantity_kg": 138938,
+                  "price_per_kg_usd": 5.81,
+                  "id": 262
+                },
+                {
+                  "country": "Denmark",
+                  "value_1000usd": 802.71,
+                  "quantity_kg": 96000,
+                  "price_per_kg_usd": 8.36,
+                  "id": 208
+                },
+                {
+                  "country": "Singapore",
+                  "value_1000usd": 752.92,
+                  "quantity_kg": 155273,
+                  "price_per_kg_usd": 4.85,
+                  "id": 702
+                },
+                {
+                  "country": "Burundi",
+                  "value_1000usd": 726.86,
+                  "quantity_kg": 103560,
+                  "price_per_kg_usd": 7.02,
+                  "id": 108
+                },
+                {
+                  "country": "Western Sahara",
+                  "value_1000usd": 422.17,
+                  "quantity_kg": 96000,
+                  "price_per_kg_usd": 4.4,
+                  "id": 732
+                },
+                {
+                  "country": "Ecuador",
+                  "value_1000usd": 370.99,
+                  "quantity_kg": 23732,
+                  "price_per_kg_usd": 15.63,
+                  "id": 218
+                },
+                {
+                  "country": "Chile",
+                  "value_1000usd": 303.2,
+                  "quantity_kg": 38484,
+                  "price_per_kg_usd": 7.88,
+                  "id": 152
+                },
+                {
+                  "country": "Canada",
+                  "value_1000usd": 293.62,
+                  "quantity_kg": 63569,
+                  "price_per_kg_usd": 4.62,
+                  "id": 124
+                },
+                {
+                  "country": "Bolivia",
+                  "value_1000usd": 280.43,
+                  "quantity_kg": 21230,
+                  "price_per_kg_usd": 13.21,
+                  "id": 68
+                },
+                {
+                  "country": "United Kingdom",
+                  "value_1000usd": 226.05,
+                  "quantity_kg": 38518,
+                  "price_per_kg_usd": 5.87,
+                  "id": 826
+                },
+                {
+                  "country": "United States",
+                  "value_1000usd": 173.37,
+                  "quantity_kg": 28845,
+                  "price_per_kg_usd": 6.01,
+                  "id": 840
+                },
+                {
+                  "country": "Zambia",
+                  "value_1000usd": 132.65,
+                  "quantity_kg": 19200,
+                  "price_per_kg_usd": 6.91,
+                  "id": 894
+                },
+                {
+                  "country": "New Zealand",
+                  "value_1000usd": 125.83,
+                  "quantity_kg": 16400,
+                  "price_per_kg_usd": 7.67,
+                  "id": 554
+                },
+                {
+                  "country": "Netherlands",
+                  "value_1000usd": 114.11,
+                  "quantity_kg": 19200,
+                  "price_per_kg_usd": 5.94,
+                  "id": 528
+                },
+                {
+                  "country": "Myanmar",
+                  "value_1000usd": 104.68,
+                  "quantity_kg": 11210,
+                  "price_per_kg_usd": 9.34,
+                  "id": 104
+                },
+                {
+                  "country": "Malaysia",
+                  "value_1000usd": 95.43,
+                  "quantity_kg": 19701,
+                  "price_per_kg_usd": 4.84,
+                  "id": 458
+                },
+                {
+                  "country": "Hungary",
+                  "value_1000usd": 84.68,
+                  "quantity_kg": 20700,
+                  "price_per_kg_usd": 4.09,
+                  "id": 348
+                },
+                {
+                  "country": "Jamaica",
+                  "value_1000usd": 75.32,
+                  "quantity_kg": 1220,
+                  "price_per_kg_usd": 61.74,
+                  "id": 388
+                },
+                {
+                  "country": "Yemen",
+                  "value_1000usd": 65.59,
+                  "quantity_kg": 3460,
+                  "price_per_kg_usd": 18.96,
+                  "id": 887
+                },
+                {
+                  "country": "Thailand",
+                  "value_1000usd": 52.79,
+                  "quantity_kg": 4657,
+                  "price_per_kg_usd": 11.34,
+                  "id": 764
+                },
+                {
+                  "country": "Australia",
+                  "value_1000usd": 49.45,
+                  "quantity_kg": 19200,
+                  "price_per_kg_usd": 2.58,
+                  "id": 36
+                },
+                {
+                  "country": "Italy",
+                  "value_1000usd": 48.55,
+                  "quantity_kg": 10040,
+                  "price_per_kg_usd": 4.84,
+                  "id": 380
+                },
+                {
+                  "country": "Lao PDR",
+                  "value_1000usd": 33.27,
+                  "quantity_kg": 9000,
+                  "price_per_kg_usd": 3.7,
+                  "id": 418
+                },
+                {
+                  "country": "Nepal",
+                  "value_1000usd": 27.94,
+                  "quantity_kg": 1920,
+                  "price_per_kg_usd": 14.55,
+                  "id": 524
+                },
+                {
+                  "country": "Philippines",
+                  "value_1000usd": 7.11,
+                  "quantity_kg": 389,
+                  "price_per_kg_usd": 18.28,
+                  "id": 608
+                },
+                {
+                  "country": "France",
+                  "value_1000usd": 1.35,
+                  "quantity_kg": 23,
+                  "price_per_kg_usd": 59.73,
+                  "id": 250
+                }
+              ]
+            },
+            "key": "id",
+            "fields": [
+              "country",
+              "value_1000usd",
+              "quantity_kg",
+              "price_per_kg_usd"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#fff",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "color": {
+          "field": "value_1000usd",
+          "type": "quantitative",
+          "scale": {
+            "type": "log",
+            "scheme": "browns"
+          },
+          "legend": {
+            "title": "Import Value (\u00d7$1,000 USD)",
+            "orient": "bottom",
+            "direction": "horizontal"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "country",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "value_1000usd",
+            "type": "quantitative",
+            "title": "Value (\u00d7$1,000 USD)",
+            "format": ",.0f"
+          },
+          {
+            "field": "quantity_kg",
+            "type": "quantitative",
+            "title": "Quantity (kg)",
+            "format": ",.0f"
+          },
+          {
+            "field": "price_per_kg_usd",
+            "type": "quantitative",
+            "title": "Price per kg (USD)",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lat": -25.274,
+            "lon": 133.775
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "shape": "diamond",
+        "size": 120,
+        "color": "#c0392b",
+        "filled": true,
+        "stroke": "#fff",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "tooltip": {
+          "value": "Australia (Importer)"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

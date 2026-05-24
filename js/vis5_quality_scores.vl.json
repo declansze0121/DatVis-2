@@ -1,0 +1,335 @@
+﻿{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Coffee Bean Quality Profile by Origin Country",
+    "subtitle": "Average cupping scores from the Coffee Quality Institute \u2014 countries that also export to Australia",
+    "fontSize": 16,
+    "subtitleFontSize": 12
+  },
+  "width": 420,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "country": "Ethiopia",
+        "attribute": "Aroma",
+        "score": 7.9
+      },
+      {
+        "country": "Ethiopia",
+        "attribute": "Flavor",
+        "score": 8.01
+      },
+      {
+        "country": "Ethiopia",
+        "attribute": "Aftertaste",
+        "score": 7.89
+      },
+      {
+        "country": "Ethiopia",
+        "attribute": "Acidity",
+        "score": 8.04
+      },
+      {
+        "country": "Ethiopia",
+        "attribute": "Body",
+        "score": 7.92
+      },
+      {
+        "country": "Ethiopia",
+        "attribute": "Balance",
+        "score": 7.97
+      },
+      {
+        "country": "Kenya",
+        "attribute": "Aroma",
+        "score": 7.79
+      },
+      {
+        "country": "Kenya",
+        "attribute": "Flavor",
+        "score": 7.78
+      },
+      {
+        "country": "Kenya",
+        "attribute": "Aftertaste",
+        "score": 7.71
+      },
+      {
+        "country": "Kenya",
+        "attribute": "Acidity",
+        "score": 7.87
+      },
+      {
+        "country": "Kenya",
+        "attribute": "Body",
+        "score": 7.73
+      },
+      {
+        "country": "Kenya",
+        "attribute": "Balance",
+        "score": 7.8
+      },
+      {
+        "country": "Colombia",
+        "attribute": "Aroma",
+        "score": 7.65
+      },
+      {
+        "country": "Colombia",
+        "attribute": "Flavor",
+        "score": 7.6
+      },
+      {
+        "country": "Colombia",
+        "attribute": "Aftertaste",
+        "score": 7.52
+      },
+      {
+        "country": "Colombia",
+        "attribute": "Acidity",
+        "score": 7.56
+      },
+      {
+        "country": "Colombia",
+        "attribute": "Body",
+        "score": 7.61
+      },
+      {
+        "country": "Colombia",
+        "attribute": "Balance",
+        "score": 7.71
+      },
+      {
+        "country": "El Salvador",
+        "attribute": "Aroma",
+        "score": 7.67
+      },
+      {
+        "country": "El Salvador",
+        "attribute": "Flavor",
+        "score": 7.65
+      },
+      {
+        "country": "El Salvador",
+        "attribute": "Aftertaste",
+        "score": 7.57
+      },
+      {
+        "country": "El Salvador",
+        "attribute": "Acidity",
+        "score": 7.59
+      },
+      {
+        "country": "El Salvador",
+        "attribute": "Body",
+        "score": 7.61
+      },
+      {
+        "country": "El Salvador",
+        "attribute": "Balance",
+        "score": 7.71
+      },
+      {
+        "country": "Costa Rica",
+        "attribute": "Aroma",
+        "score": 7.67
+      },
+      {
+        "country": "Costa Rica",
+        "attribute": "Flavor",
+        "score": 7.54
+      },
+      {
+        "country": "Costa Rica",
+        "attribute": "Aftertaste",
+        "score": 7.53
+      },
+      {
+        "country": "Costa Rica",
+        "attribute": "Acidity",
+        "score": 7.57
+      },
+      {
+        "country": "Costa Rica",
+        "attribute": "Body",
+        "score": 7.54
+      },
+      {
+        "country": "Costa Rica",
+        "attribute": "Balance",
+        "score": 7.64
+      },
+      {
+        "country": "Indonesia",
+        "attribute": "Aroma",
+        "score": 7.65
+      },
+      {
+        "country": "Indonesia",
+        "attribute": "Flavor",
+        "score": 7.57
+      },
+      {
+        "country": "Indonesia",
+        "attribute": "Aftertaste",
+        "score": 7.42
+      },
+      {
+        "country": "Indonesia",
+        "attribute": "Acidity",
+        "score": 7.49
+      },
+      {
+        "country": "Indonesia",
+        "attribute": "Body",
+        "score": 7.63
+      },
+      {
+        "country": "Indonesia",
+        "attribute": "Balance",
+        "score": 7.52
+      },
+      {
+        "country": "Peru",
+        "attribute": "Aroma",
+        "score": 7.69
+      },
+      {
+        "country": "Peru",
+        "attribute": "Flavor",
+        "score": 7.66
+      },
+      {
+        "country": "Peru",
+        "attribute": "Aftertaste",
+        "score": 7.54
+      },
+      {
+        "country": "Peru",
+        "attribute": "Acidity",
+        "score": 7.7
+      },
+      {
+        "country": "Peru",
+        "attribute": "Body",
+        "score": 7.8
+      },
+      {
+        "country": "Peru",
+        "attribute": "Balance",
+        "score": 7.67
+      },
+      {
+        "country": "Brazil",
+        "attribute": "Aroma",
+        "score": 7.55
+      },
+      {
+        "country": "Brazil",
+        "attribute": "Flavor",
+        "score": 7.57
+      },
+      {
+        "country": "Brazil",
+        "attribute": "Aftertaste",
+        "score": 7.44
+      },
+      {
+        "country": "Brazil",
+        "attribute": "Acidity",
+        "score": 7.51
+      },
+      {
+        "country": "Brazil",
+        "attribute": "Body",
+        "score": 7.54
+      },
+      {
+        "country": "Brazil",
+        "attribute": "Balance",
+        "score": 7.53
+      }
+    ]
+  },
+  "mark": {
+    "type": "rect",
+    "stroke": "#fff",
+    "strokeWidth": 1.5
+  },
+  "encoding": {
+    "x": {
+      "field": "attribute",
+      "type": "nominal",
+      "title": null,
+      "axis": {
+        "labelAngle": 0,
+        "labelFontSize": 12
+      },
+      "sort": [
+        "Aroma",
+        "Flavor",
+        "Aftertaste",
+        "Acidity",
+        "Body",
+        "Balance"
+      ]
+    },
+    "y": {
+      "field": "country",
+      "type": "nominal",
+      "title": null,
+      "axis": {
+        "labelFontSize": 12
+      },
+      "sort": {
+        "op": "mean",
+        "field": "score",
+        "order": "descending"
+      }
+    },
+    "color": {
+      "field": "score",
+      "type": "quantitative",
+      "title": "Score",
+      "scale": {
+        "scheme": "browns",
+        "domain": [
+          7.4,
+          8.8
+        ]
+      },
+      "legend": {
+        "direction": "horizontal",
+        "orient": "bottom",
+        "gradientLength": 260
+      }
+    },
+    "tooltip": [
+      {
+        "field": "country",
+        "type": "nominal",
+        "title": "Country"
+      },
+      {
+        "field": "attribute",
+        "type": "nominal",
+        "title": "Attribute"
+      },
+      {
+        "field": "score",
+        "type": "quantitative",
+        "title": "Score",
+        "format": ".2f"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false
+    }
+  }
+}
